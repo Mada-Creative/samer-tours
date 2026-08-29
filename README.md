@@ -18,9 +18,10 @@ vanilla JavaScript — open the folder in any static web host and it works.
 - `destinations.html` — All 25 destinations, grouped into 7 regions,
   each as a photo card linking to its own detail page.
 - `destination.html?id=<id>` — One page per destination (template-driven,
-  not 25 separate files): full-bleed hero photo, description, top
-  attractions, hotels Samer has stayed at (only shown once provided —
-  see below), and a "Book this destination" button.
+  not 25 separate files): full-bleed hero photo, description, a
+  6-photo gallery of its top attractions (click any photo for a
+  full-size lightbox view), hotels Samer has stayed at (only shown
+  once provided — see below), and a "Book this destination" button.
 - `booking.html` — The trip request form (see below).
 
 ## Structure
@@ -38,9 +39,10 @@ samer-tours/
     └── js/
         ├── i18n.js                 ← Arabic/English text dictionary + language switcher
         ├── config.js                ← the one place to set the form's email endpoint
-        ├── main.js                  ← shared UI (nav drawer, header shrink-on-scroll, scroll reveal)
-        ├── destinations-data.js     ← destination list, regions, photos, hotels, map coordinates
-        ├── render-destinations.js   ← builds destination cards / detail page / booking dropdown
+        ├── main.js                  ← shared UI (mobile nav, header shrink-on-scroll, scroll reveal)
+        ├── destinations-data.js     ← destination list, regions, hero photos, hotels, colors
+        ├── destinations-gallery.js  ← the 6-photo gallery per destination (attraction photos)
+        ├── render-destinations.js   ← builds destination cards / detail page / gallery lightbox / booking dropdown
         ├── booking.js                ← booking form logic (trip type, honeymoon quiz, validation, submit)
         └── contact-form.js           ← homepage "call me back" form logic
 ```
@@ -97,27 +99,38 @@ missing, the page shows a placeholder instead of a broken image.
 
 ## 5. Destination photos & attribution
 
-Each destination has a real photo of its landmark (e.g. Puerta del Sol
-for Madrid, the Duomo for Milan), sourced from **Wikimedia Commons**
-under free licenses (CC BY / CC BY-SA / CC0). Photo credit + license +
-source link are shown under the description on each destination's page,
-which satisfies the license's attribution requirement.
+Every destination has a real hero photo (e.g. Puerta del Sol for
+Madrid) **plus a 6-photo gallery**, one per named attraction (the Duomo,
+Galleria Vittorio Emanuele, Sforza Castle, etc. for Milan) — 150 photos
+in total, all sourced from **Wikimedia Commons** under free licenses
+(CC BY / CC BY-SA / CC0 — mixed per photo). Credit + license + source
+link are shown under the description on each destination's page (hero
+photo) and inside the gallery lightbox (each gallery photo), which
+satisfies the license's attribution requirement.
 
-Before commercial launch, consider swapping these for Samer's own trip
-photos — change the `heroImage` URL for that destination in
-`assets/js/destinations-data.js`.
+These were matched automatically by attraction name, so a couple may be
+a slightly imperfect pick (an interior shot instead of an exterior, for
+instance) — worth a quick skim before commercial launch. Before then,
+also consider swapping some for Samer's own trip photos: hero photos
+live in `heroImage` per destination in `assets/js/destinations-data.js`;
+gallery photos live in `assets/js/destinations-gallery.js` (one array
+per destination, keyed to `attr_1`..`attr_6`).
 
 ## 6. Adding / editing destinations
 
-Each destination's text lives in `i18n.js` (`dest_<id>_*` keys); its
-structural data (region, accent color, hero photo, hotels, map
-coordinates) lives in `assets/js/destinations-data.js`. The
-destinations page, each detail page, and the booking form's dropdown
-are all generated automatically from this data.
+Each destination's text lives in `i18n.js` (`dest_<id>_*` keys, now 6
+attractions per destination — `attr_1` through `attr_6`); its
+structural data (region, accent color, hero photo, hotels) lives in
+`assets/js/destinations-data.js`; its photo gallery lives in
+`assets/js/destinations-gallery.js`. The destinations page, each detail
+page, and the booking form's dropdown are all generated automatically
+from this data.
 
-**To add a destination:** add its `dest_<id>_*` text keys to `i18n.js`,
-add one entry to `DESTINATIONS` in `destinations-data.js`, and add its
-`id` to a group in `DESTINATION_REGIONS`.
+**To add a destination:** add its `dest_<id>_*` text keys (including
+`attr_1`..`attr_6`) to `i18n.js`, add one entry to `DESTINATIONS` in
+`destinations-data.js`, add its `id` to a group in
+`DESTINATION_REGIONS`, and add a matching 6-photo array to
+`DESTINATION_GALLERY` in `destinations-gallery.js`.
 
 ### Adding hotels (optional, per Samer)
 
@@ -158,9 +171,13 @@ Fully static — host anywhere with zero configuration: Netlify, Vercel
 - **Numerals:** Western digits throughout, including in Arabic. The one
   exception is the native date-picker (`<input type="date">`), whose
   digit style follows the visitor's own browser/OS locale.
-- **Mobile navigation:** a side drawer (slides in from the edge nearest
-  the hamburger button, with a dimmed backdrop) rather than a dropdown.
-- **Header:** shrinks slightly (76px → 60px) once the page is scrolled,
-  for a more compact feel while browsing.
-- **Colors:** a warm, editorial travel palette (deep teal, terracotta,
-  gold) defined as CSS variables at the top of `assets/css/style.css`.
+- **Mobile navigation:** a simple dropdown panel under the header.
+- **Header:** on scroll it shrinks (76px → 60px), lifts off the top
+  edge, and pulls in from both sides into a rounded floating bar —
+  while staying `position: sticky`, so it keeps following the scroll
+  rather than just animating once.
+- **Colors:** a "golden hour wanderlust" travel palette — deep dusk
+  ocean-blue, sunset coral-orange, and warm gold on a sand background —
+  defined as CSS variables at the top of `assets/css/style.css`. Change
+  `--color-primary` / `--color-accent` / `--color-gold` there to retheme
+  the whole site (every component reads from these).

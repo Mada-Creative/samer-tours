@@ -111,6 +111,7 @@ window.SITE_I18N = {
     dest_madrid_attr_3: "متحف برادو",
     dest_madrid_attr_4: "حديقة الريتيرو",
     dest_madrid_attr_5: "شارع جران فيا",
+    dest_madrid_attr_6: "معبد ديبود",
 
     dest_valencia_name: "فالنسيا", dest_valencia_country: "إسبانيا",
     dest_valencia_tagline: "شمس وشواطئ وعمارة مستقبلية",
@@ -120,6 +121,7 @@ window.SITE_I18N = {
     dest_valencia_attr_3: "شاطئ المالفاروسا",
     dest_valencia_attr_4: "السوق المركزي",
     dest_valencia_attr_5: "حي الكارمن",
+    dest_valencia_attr_6: "أبراج سيرانوس",
 
     dest_milano_name: "ميلانو", dest_milano_country: "إيطاليا",
     dest_milano_tagline: "أناقة إيطالية بين التاريخ والموضة",
@@ -129,6 +131,7 @@ window.SITE_I18N = {
     dest_milano_attr_3: "قلعة سفورزيسكو",
     dest_milano_attr_4: "مسرح لاسكالا",
     dest_milano_attr_5: "حي نافيلي",
+    dest_milano_attr_6: "كنيسة سانتا ماريا ديلي غراتزيه",
 
     dest_amsterdam_name: "أمستردام", dest_amsterdam_country: "هولندا",
     dest_amsterdam_tagline: "قنوات مائية وتاريخ عريق على كل زاوية",
@@ -138,6 +141,7 @@ window.SITE_I18N = {
     dest_amsterdam_attr_3: "حديقة فوندل",
     dest_amsterdam_attr_4: "حزام القنوات",
     dest_amsterdam_attr_5: "حي جوردان",
+    dest_amsterdam_attr_6: "متحف فان جوخ",
 
     dest_oslo_name: "أوسلو", dest_oslo_country: "النرويج",
     dest_oslo_tagline: "طبيعة إسكندنافية هادئة وفنون معاصرة",
@@ -147,6 +151,7 @@ window.SITE_I18N = {
     dest_oslo_attr_3: "متحف سفن الفايكنج",
     dest_oslo_attr_4: "قلعة أكرشوس",
     dest_oslo_attr_5: "شارع كارل يوهانس",
+    dest_oslo_attr_6: "منصة هولمنكولن للتزلج",
 
     dest_madeira_name: "ماديرا", dest_madeira_country: "البرتغال",
     dest_madeira_tagline: "جزيرة أطلسية بين الجبال الخضراء والمحيط",
@@ -156,6 +161,7 @@ window.SITE_I18N = {
     dest_madeira_attr_3: "مدينة فونشال القديمة",
     dest_madeira_attr_4: "حديقة مونتي الاستوائية",
     dest_madeira_attr_5: "قمة بيكو دو أرييرو",
+    dest_madeira_attr_6: "زلاجات مونتي التقليدية",
 
     dest_metz_name: "ميتز", dest_metz_country: "فرنسا",
     dest_metz_tagline: "مدينة فرنسية هادئة بعمارة قوطية ونوافذ زجاجية ساحرة",
@@ -165,6 +171,7 @@ window.SITE_I18N = {
     dest_metz_attr_3: "ساحة سان لوي",
     dest_metz_attr_4: "متحف لا كور دور",
     dest_metz_attr_5: "ضفاف نهر الموزيل",
+    dest_metz_attr_6: "بوابة الألمان",
 
     dest_brussels_name: "بروكسل", dest_brussels_country: "بلجيكا",
     dest_brussels_tagline: "عاصمة أوروبية بطابع تاريخي ومعماري مميز",
@@ -174,6 +181,7 @@ window.SITE_I18N = {
     dest_brussels_attr_3: "تمثال مانيكين بيس",
     dest_brussels_attr_4: "القصر الملكي",
     dest_brussels_attr_5: "حي مون دي زار",
+    dest_brussels_attr_6: "حديقة سانكونتينير",
 
     dest_luxembourg_name: "لوكسمبورغ", dest_luxembourg_country: "لوكسمبورغ",
     dest_luxembourg_tagline: "مدينة صغيرة بقلاع وحصون فوق أودية خضراء",
@@ -183,6 +191,7 @@ window.SITE_I18N = {
     dest_luxembourg_attr_3: "حي غروند",
     dest_luxembourg_attr_4: "كاتدرائية نوتردام",
     dest_luxembourg_attr_5: "ممشى كورنيش",
+    dest_luxembourg_attr_6: "ساحة غيوم الثاني",
 
     dest_dortmund_name: "دورتموند", dest_dortmund_country: "ألمانيا",
     dest_dortmund_tagline: "مدينة ألمانية نابضة بالرياضة والصناعة الحديثة",
@@ -192,6 +201,7 @@ window.SITE_I18N = {
     dest_dortmund_attr_3: "برج يو (متحف الفن)",
     dest_dortmund_attr_4: "كنيسة راينولدي",
     dest_dortmund_attr_5: "الساحة القديمة",
+    dest_dortmund_attr_6: "متحف كرة القدم الألماني",
 
     dest_munich_name: "ميونيخ", dest_munich_country: "ألمانيا",
     dest_munich_tagline: "عاصمة بافاريا بين التقاليد العريقة والحدائق الخضراء",
@@ -201,6 +211,7 @@ window.SITE_I18N = {
     dest_munich_attr_3: "الحديقة الإنجليزية",
     dest_munich_attr_4: "قصر نيمفنبورغ",
     dest_munich_attr_5: "سوق فيكتواليين",
+    dest_munich_attr_6: "الحديقة الأولمبية",
 
     dest_hallstatt_name: "هالشتات", dest_hallstatt_country: "النمسا",
     dest_hallstatt_tagline: "قرية جبلية ساحرة على ضفاف بحيرة صافية",
@@ -210,6 +221,7 @@ window.SITE_I18N = {
     dest_hallstatt_attr_3: "منجم الملح",
     dest_hallstatt_attr_4: "الساحة الرئيسية للقرية",
     dest_hallstatt_attr_5: "مقبرة العظام (بينهاوس)",
+    dest_hallstatt_attr_6: "بانوراما جبل داخشتاين",
 
     dest_vienna_name: "فيينا", dest_vienna_country: "النمسا",
     dest_vienna_tagline: "عاصمة الموسيقى الكلاسيكية والقصور الإمبراطورية",
@@ -219,6 +231,7 @@ window.SITE_I18N = {
     dest_vienna_attr_3: "قصر بلفيدير",
     dest_vienna_attr_4: "دار أوبرا فيينا",
     dest_vienna_attr_5: "سوق ناشماركت",
+    dest_vienna_attr_6: "قصر هوفبورغ",
 
     dest_innsbruck_name: "إنسبروك", dest_innsbruck_country: "النمسا",
     dest_innsbruck_tagline: "مدينة جبلية تحيط بها قمم الألب من كل جانب",
@@ -228,6 +241,7 @@ window.SITE_I18N = {
     dest_innsbruck_attr_3: "عالم كريستال سواروفسكي",
     dest_innsbruck_attr_4: "قلعة أمبراس",
     dest_innsbruck_attr_5: "المدينة القديمة",
+    dest_innsbruck_attr_6: "منصة قفز التزلج بيرغيزل",
 
     dest_edinburgh_name: "إدنبرة", dest_edinburgh_country: "اسكتلندا، المملكة المتحدة",
     dest_edinburgh_tagline: "عاصمة اسكتلندية بقلعة تاريخية فوق تلة صخرية",
@@ -237,6 +251,7 @@ window.SITE_I18N = {
     dest_edinburgh_attr_3: "مقعد آرثر",
     dest_edinburgh_attr_4: "قصر هوليرود",
     dest_edinburgh_attr_5: "المدينة القديمة",
+    dest_edinburgh_attr_6: "تلة كالتون",
 
     dest_wales_name: "ويلز", dest_wales_country: "المملكة المتحدة",
     dest_wales_tagline: "طبيعة جبلية خلابة وقلاع من القرون الوسطى",
@@ -246,6 +261,7 @@ window.SITE_I18N = {
     dest_wales_attr_3: "قلعة كارديف",
     dest_wales_attr_4: "ساحل بيمبروكشير",
     dest_wales_attr_5: "قرية بورتميريون",
+    dest_wales_attr_6: "قلعة كارنارفون",
 
     dest_bath_name: "باث", dest_bath_country: "إنجلترا، المملكة المتحدة",
     dest_bath_tagline: "مدينة إنجليزية أثرية بحمامات رومانية وعمارة جورجية",
@@ -255,6 +271,7 @@ window.SITE_I18N = {
     dest_bath_attr_3: "الهلال الملكي",
     dest_bath_attr_4: "جسر بولتيني",
     dest_bath_attr_5: "ساحة السيركس",
+    dest_bath_attr_6: "حمامات ثيرمي باث الحديثة",
 
     dest_longyearbyen_name: "لونغيرباين", dest_longyearbyen_country: "سفالبارد، النرويج",
     dest_longyearbyen_tagline: "أقصى نقطة مأهولة في الشمال، حيث يلتقي الجليد بالسماء",
@@ -264,6 +281,7 @@ window.SITE_I18N = {
     dest_longyearbyen_attr_3: "ركوب زلاجات الكلاب",
     dest_longyearbyen_attr_4: "الشفق القطبي",
     dest_longyearbyen_attr_5: "شارع لونغيرباين الرئيسي",
+    dest_longyearbyen_attr_6: "قبو سفالبارد العالمي للبذور",
 
     dest_copenhagen_name: "كوبنهاغن", dest_copenhagen_country: "الدنمارك",
     dest_copenhagen_tagline: "عاصمة اسكندنافية أنيقة بميناء ملون وحدائق ترفيهية",
@@ -273,6 +291,7 @@ window.SITE_I18N = {
     dest_copenhagen_attr_3: "حدائق تيفولي",
     dest_copenhagen_attr_4: "قصر كريستيانسبورغ",
     dest_copenhagen_attr_5: "قلعة روزنبورغ",
+    dest_copenhagen_attr_6: "قصر أمالينبورغ",
 
     dest_tallinn_name: "تالين", dest_tallinn_country: "إستونيا",
     dest_tallinn_tagline: "مدينة عصور وسطى محفوظة بأسوارها وأبراجها",
@@ -282,6 +301,7 @@ window.SITE_I18N = {
     dest_tallinn_attr_3: "ساحة البلدية القديمة",
     dest_tallinn_attr_4: "أسوار المدينة وأبراجها",
     dest_tallinn_attr_5: "قصر وحديقة كادريورغ",
+    dest_tallinn_attr_6: "كنيسة القديس أولاف",
 
     dest_krakow_name: "كراكوف", dest_krakow_country: "بولندا",
     dest_krakow_tagline: "مدينة بولندية عريقة بقلعة ملكية وساحة تاريخية",
@@ -291,6 +311,7 @@ window.SITE_I18N = {
     dest_krakow_attr_3: "كنيسة القديسة مريم",
     dest_krakow_attr_4: "حي كازيمييج",
     dest_krakow_attr_5: "قاعة النسيج (سوق الأقمشة)",
+    dest_krakow_attr_6: "متحف مصنع شندلر",
 
     dest_zakopane_name: "زاكوباني", dest_zakopane_country: "بولندا",
     dest_zakopane_tagline: "بوابة جبال التاترا وعاصمة الجبال البولندية",
@@ -300,6 +321,7 @@ window.SITE_I18N = {
     dest_zakopane_attr_3: "شارع كروبوفكي",
     dest_zakopane_attr_4: "العمارة الجبلية الخشبية التقليدية",
     dest_zakopane_attr_5: "تلفريك كاسبروفي فيرش",
+    dest_zakopane_attr_6: "منصة فيلكا كروكيف لقفز التزلج",
 
     dest_budapest_name: "بودابست", dest_budapest_country: "المجر",
     dest_budapest_tagline: "عاصمة أوروبية على ضفاف الدانوب بحمامات حرارية شهيرة",
@@ -309,6 +331,7 @@ window.SITE_I18N = {
     dest_budapest_attr_3: "قلعة بودا",
     dest_budapest_attr_4: "حمامات سيتشيني الحرارية",
     dest_budapest_attr_5: "جسر السلاسل",
+    dest_budapest_attr_6: "ساحة الأبطال",
 
     dest_dubai_name: "دبي", dest_dubai_country: "الإمارات العربية المتحدة",
     dest_dubai_tagline: "مدينة مستقبلية شاهقة على ساحل الخليج العربي",
@@ -318,6 +341,7 @@ window.SITE_I18N = {
     dest_dubai_attr_3: "مرسى دبي",
     dest_dubai_attr_4: "نخلة جميرا",
     dest_dubai_attr_5: "حي الفهيدي التاريخي",
+    dest_dubai_attr_6: "دبي فريم",
 
     dest_abudhabi_name: "أبوظبي", dest_abudhabi_country: "الإمارات العربية المتحدة",
     dest_abudhabi_tagline: "عاصمة إماراتية تجمع بين الأصالة والفخامة الحديثة",
@@ -327,6 +351,7 @@ window.SITE_I18N = {
     dest_abudhabi_attr_3: "كورنيش أبوظبي",
     dest_abudhabi_attr_4: "قصر الوطن",
     dest_abudhabi_attr_5: "جزيرة ياس",
+    dest_abudhabi_attr_6: "قصر الإمارات",
 
     /* Booking page */
     page_booking_eyebrow: "الحجز",
@@ -547,6 +572,7 @@ window.SITE_I18N = {
     dest_madrid_attr_3: "Museo del Prado",
     dest_madrid_attr_4: "Retiro Park",
     dest_madrid_attr_5: "Gran Vía",
+    dest_madrid_attr_6: "Temple of Debod",
 
     dest_valencia_name: "Valencia", dest_valencia_country: "Spain",
     dest_valencia_tagline: "Sunshine, beaches, and futuristic architecture",
@@ -556,6 +582,7 @@ window.SITE_I18N = {
     dest_valencia_attr_3: "Malvarrosa Beach",
     dest_valencia_attr_4: "Central Market",
     dest_valencia_attr_5: "El Carmen District",
+    dest_valencia_attr_6: "Serranos Towers",
 
     dest_milano_name: "Milan", dest_milano_country: "Italy",
     dest_milano_tagline: "Italian elegance between history and fashion",
@@ -565,6 +592,7 @@ window.SITE_I18N = {
     dest_milano_attr_3: "Sforza Castle",
     dest_milano_attr_4: "Teatro alla Scala",
     dest_milano_attr_5: "The Navigli District",
+    dest_milano_attr_6: "Santa Maria delle Grazie",
 
     dest_amsterdam_name: "Amsterdam", dest_amsterdam_country: "Netherlands",
     dest_amsterdam_tagline: "Waterways and rich history on every corner",
@@ -574,6 +602,7 @@ window.SITE_I18N = {
     dest_amsterdam_attr_3: "Vondelpark",
     dest_amsterdam_attr_4: "Canal Ring",
     dest_amsterdam_attr_5: "Jordaan District",
+    dest_amsterdam_attr_6: "Van Gogh Museum",
 
     dest_oslo_name: "Oslo", dest_oslo_country: "Norway",
     dest_oslo_tagline: "Calm Scandinavian nature and contemporary art",
@@ -583,6 +612,7 @@ window.SITE_I18N = {
     dest_oslo_attr_3: "Viking Ship Museum",
     dest_oslo_attr_4: "Akershus Fortress",
     dest_oslo_attr_5: "Karl Johans Gate",
+    dest_oslo_attr_6: "Holmenkollen Ski Jump",
 
     dest_madeira_name: "Madeira", dest_madeira_country: "Portugal",
     dest_madeira_tagline: "An Atlantic island between green mountains and ocean",
@@ -592,6 +622,7 @@ window.SITE_I18N = {
     dest_madeira_attr_3: "Funchal Old Town",
     dest_madeira_attr_4: "Monte Palace Tropical Garden",
     dest_madeira_attr_5: "Pico do Arieiro Peak",
+    dest_madeira_attr_6: "Monte Toboggan Ride",
 
     dest_metz_name: "Metz", dest_metz_country: "France",
     dest_metz_tagline: "A quiet French city with Gothic architecture and stunning stained glass",
@@ -601,6 +632,7 @@ window.SITE_I18N = {
     dest_metz_attr_3: "Place Saint-Louis",
     dest_metz_attr_4: "La Cour d'Or Museum",
     dest_metz_attr_5: "The Moselle Riverbanks",
+    dest_metz_attr_6: "Porte des Allemands",
 
     dest_brussels_name: "Brussels", dest_brussels_country: "Belgium",
     dest_brussels_tagline: "A European capital with distinct history and architecture",
@@ -610,6 +642,7 @@ window.SITE_I18N = {
     dest_brussels_attr_3: "Manneken Pis",
     dest_brussels_attr_4: "Royal Palace",
     dest_brussels_attr_5: "Mont des Arts",
+    dest_brussels_attr_6: "Cinquantenaire Park",
 
     dest_luxembourg_name: "Luxembourg", dest_luxembourg_country: "Luxembourg",
     dest_luxembourg_tagline: "A small city of fortresses and castles above green valleys",
@@ -619,6 +652,7 @@ window.SITE_I18N = {
     dest_luxembourg_attr_3: "The Grund District",
     dest_luxembourg_attr_4: "Notre-Dame Cathedral",
     dest_luxembourg_attr_5: "Chemin de la Corniche",
+    dest_luxembourg_attr_6: "Place Guillaume II",
 
     dest_dortmund_name: "Dortmund", dest_dortmund_country: "Germany",
     dest_dortmund_tagline: "A German city pulsing with sport and modern industry",
@@ -628,6 +662,7 @@ window.SITE_I18N = {
     dest_dortmund_attr_3: "The Dortmund U-Tower",
     dest_dortmund_attr_4: "Reinoldikirche Church",
     dest_dortmund_attr_5: "Alter Markt (Old Market Square)",
+    dest_dortmund_attr_6: "German Football Museum",
 
     dest_munich_name: "Munich", dest_munich_country: "Germany",
     dest_munich_tagline: "Bavaria's capital between old traditions and green gardens",
@@ -637,6 +672,7 @@ window.SITE_I18N = {
     dest_munich_attr_3: "The English Garden",
     dest_munich_attr_4: "Nymphenburg Palace",
     dest_munich_attr_5: "Viktualienmarkt",
+    dest_munich_attr_6: "Olympiapark",
 
     dest_hallstatt_name: "Hallstatt", dest_hallstatt_country: "Austria",
     dest_hallstatt_tagline: "A charming mountain village on the shore of a pristine lake",
@@ -646,6 +682,7 @@ window.SITE_I18N = {
     dest_hallstatt_attr_3: "The Salt Mine (Salzwelten)",
     dest_hallstatt_attr_4: "The Market Square",
     dest_hallstatt_attr_5: "The Hallstatt Charnel House",
+    dest_hallstatt_attr_6: "Dachstein Mountain Panorama",
 
     dest_vienna_name: "Vienna", dest_vienna_country: "Austria",
     dest_vienna_tagline: "The capital of classical music and imperial palaces",
@@ -655,6 +692,7 @@ window.SITE_I18N = {
     dest_vienna_attr_3: "Belvedere Palace",
     dest_vienna_attr_4: "Vienna State Opera",
     dest_vienna_attr_5: "Naschmarkt",
+    dest_vienna_attr_6: "Hofburg Palace",
 
     dest_innsbruck_name: "Innsbruck", dest_innsbruck_country: "Austria",
     dest_innsbruck_tagline: "A mountain city surrounded by Alpine peaks on every side",
@@ -664,6 +702,7 @@ window.SITE_I18N = {
     dest_innsbruck_attr_3: "Swarovski Crystal Worlds",
     dest_innsbruck_attr_4: "Ambras Castle",
     dest_innsbruck_attr_5: "The Old Town (Altstadt)",
+    dest_innsbruck_attr_6: "Bergisel Ski Jump",
 
     dest_edinburgh_name: "Edinburgh", dest_edinburgh_country: "Scotland, United Kingdom",
     dest_edinburgh_tagline: "A Scottish capital with a historic castle atop a rocky hill",
@@ -673,6 +712,7 @@ window.SITE_I18N = {
     dest_edinburgh_attr_3: "Arthur's Seat",
     dest_edinburgh_attr_4: "Palace of Holyroodhouse",
     dest_edinburgh_attr_5: "The Old Town",
+    dest_edinburgh_attr_6: "Calton Hill",
 
     dest_wales_name: "Wales", dest_wales_country: "United Kingdom",
     dest_wales_tagline: "Stunning mountain nature and medieval castles",
@@ -682,6 +722,7 @@ window.SITE_I18N = {
     dest_wales_attr_3: "Cardiff Castle",
     dest_wales_attr_4: "The Pembrokeshire Coast",
     dest_wales_attr_5: "Portmeirion Village",
+    dest_wales_attr_6: "Caernarfon Castle",
 
     dest_bath_name: "Bath", dest_bath_country: "England, United Kingdom",
     dest_bath_tagline: "A historic English city with Roman baths and Georgian architecture",
@@ -691,6 +732,7 @@ window.SITE_I18N = {
     dest_bath_attr_3: "The Royal Crescent",
     dest_bath_attr_4: "Pulteney Bridge",
     dest_bath_attr_5: "The Circus",
+    dest_bath_attr_6: "Thermae Bath Spa",
 
     dest_longyearbyen_name: "Longyearbyen", dest_longyearbyen_country: "Svalbard, Norway",
     dest_longyearbyen_tagline: "The northernmost inhabited town, where ice meets the sky",
@@ -700,6 +742,7 @@ window.SITE_I18N = {
     dest_longyearbyen_attr_3: "Dog Sledding",
     dest_longyearbyen_attr_4: "The Northern Lights",
     dest_longyearbyen_attr_5: "Longyearbyen's Main Street",
+    dest_longyearbyen_attr_6: "Svalbard Global Seed Vault",
 
     dest_copenhagen_name: "Copenhagen", dest_copenhagen_country: "Denmark",
     dest_copenhagen_tagline: "An elegant Scandinavian capital with a colorful harbor and amusement gardens",
@@ -709,6 +752,7 @@ window.SITE_I18N = {
     dest_copenhagen_attr_3: "Tivoli Gardens",
     dest_copenhagen_attr_4: "Christiansborg Palace",
     dest_copenhagen_attr_5: "Rosenborg Castle",
+    dest_copenhagen_attr_6: "Amalienborg Palace",
 
     dest_tallinn_name: "Tallinn", dest_tallinn_country: "Estonia",
     dest_tallinn_tagline: "A perfectly preserved medieval city of walls and towers",
@@ -718,6 +762,7 @@ window.SITE_I18N = {
     dest_tallinn_attr_3: "Town Hall Square",
     dest_tallinn_attr_4: "The City Walls & Towers",
     dest_tallinn_attr_5: "Kadriorg Palace & Park",
+    dest_tallinn_attr_6: "St. Olaf's Church",
 
     dest_krakow_name: "Kraków", dest_krakow_country: "Poland",
     dest_krakow_tagline: "A historic Polish city with a royal castle and grand square",
@@ -727,6 +772,7 @@ window.SITE_I18N = {
     dest_krakow_attr_3: "St. Mary's Basilica",
     dest_krakow_attr_4: "The Kazimierz District",
     dest_krakow_attr_5: "The Cloth Hall",
+    dest_krakow_attr_6: "Schindler's Factory Museum",
 
     dest_zakopane_name: "Zakopane", dest_zakopane_country: "Poland",
     dest_zakopane_tagline: "The gateway to the Tatra Mountains, Poland's mountain capital",
@@ -736,6 +782,7 @@ window.SITE_I18N = {
     dest_zakopane_attr_3: "Krupówki Street",
     dest_zakopane_attr_4: "Traditional Highlander Wooden Architecture",
     dest_zakopane_attr_5: "Kasprowy Wierch Cable Car",
+    dest_zakopane_attr_6: "Wielka Krokiew Ski Jump",
 
     dest_budapest_name: "Budapest", dest_budapest_country: "Hungary",
     dest_budapest_tagline: "A European capital on the Danube, famous for its thermal baths",
@@ -745,6 +792,7 @@ window.SITE_I18N = {
     dest_budapest_attr_3: "Buda Castle",
     dest_budapest_attr_4: "Széchenyi Thermal Bath",
     dest_budapest_attr_5: "The Chain Bridge",
+    dest_budapest_attr_6: "Heroes' Square",
 
     dest_dubai_name: "Dubai", dest_dubai_country: "United Arab Emirates",
     dest_dubai_tagline: "A futuristic, soaring city on the Arabian Gulf coast",
@@ -754,6 +802,7 @@ window.SITE_I18N = {
     dest_dubai_attr_3: "Dubai Marina",
     dest_dubai_attr_4: "Palm Jumeirah",
     dest_dubai_attr_5: "Al Fahidi Historic District",
+    dest_dubai_attr_6: "Dubai Frame",
 
     dest_abudhabi_name: "Abu Dhabi", dest_abudhabi_country: "United Arab Emirates",
     dest_abudhabi_tagline: "An Emirati capital blending heritage with modern grandeur",
@@ -763,6 +812,7 @@ window.SITE_I18N = {
     dest_abudhabi_attr_3: "The Abu Dhabi Corniche",
     dest_abudhabi_attr_4: "Qasr Al Watan",
     dest_abudhabi_attr_5: "Yas Island",
+    dest_abudhabi_attr_6: "Emirates Palace",
 
     /* Booking page */
     page_booking_eyebrow: "Booking",

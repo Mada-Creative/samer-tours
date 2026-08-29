@@ -10,6 +10,15 @@
   function arrowIconSvg() {
     return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
   }
+  function zoomIconSvg() {
+    return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg>';
+  }
+  function closeIconSvg() {
+    return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+  }
+  function chevronIconSvg() {
+    return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>';
+  }
   function byId(id) {
     return (window.DESTINATIONS || []).find(function (d) { return d.id === id; });
   }
@@ -73,7 +82,7 @@
     var container = document.getElementById("featuredDestGrid");
     if (!container || !window.DESTINATIONS) return;
 
-    var featuredIds = ["madrid", "valencia", "milano", "amsterdam", "oslo"];
+    var featuredIds = ["madeira", "hallstatt", "longyearbyen", "zakopane", "tallinn"];
     featuredIds.forEach(function (id) {
       var dest = byId(id);
       if (dest) container.appendChild(buildCard(dest));
@@ -132,9 +141,27 @@
       return;
     }
 
-    var attrItems = [1, 2, 3, 4, 5].map(function (n) {
-      return '<li class="attraction-item">' + pinIconSvg() + '<span data-i18n="dest_' + dest.id + "_attr_" + n + '">Attraction</span></li>';
-    }).join("");
+    var galleryData = (window.DESTINATION_GALLERY && window.DESTINATION_GALLERY[dest.id]) || [];
+
+    var galleryHtml;
+    if (galleryData.length) {
+      galleryHtml = '<div class="attraction-gallery" id="destGallery">' +
+        galleryData.map(function (item, i) {
+          return '<button type="button" class="gallery-tile" data-index="' + i + '">' +
+            '<img src="' + item.url + '" alt="" loading="lazy">' +
+            '<span class="gallery-tile-zoom">' + zoomIconSvg() + '</span>' +
+            '<span class="gallery-tile-caption" data-i18n="dest_' + dest.id + '_' + item.attrKey + '">Place</span>' +
+          '</button>';
+        }).join("") +
+      "</div>";
+    } else {
+      // Fallback to a plain text list if gallery data isn't available for this destination.
+      galleryHtml = '<ul class="attractions-list">' +
+        [1, 2, 3, 4, 5, 6].map(function (n) {
+          return '<li class="attraction-item">' + pinIconSvg() + '<span data-i18n="dest_' + dest.id + "_attr_" + n + '">Attraction</span></li>';
+        }).join("") +
+      "</ul>";
+    }
 
     var hotelsHtml = "";
     if (dest.hotels && dest.hotels.length) {
@@ -176,7 +203,7 @@
           '<div>' +
             '<p class="dest-detail-desc" data-i18n="dest_' + dest.id + '_desc">Description</p>' +
             '<div class="attractions-title">' + pinIconSvg() + '<span data-i18n="attractions_title">Top attractions</span></div>' +
-            '<ul class="attractions-list">' + attrItems + "</ul>" +
+            galleryHtml +
             hotelsHtml +
             (dest.credit ? '<p class="photo-credit">' +
               '<span data-i18n="photo_credit_label">Photo:</span> ' +
@@ -192,9 +219,81 @@
             "</div>" +
           "</aside>" +
         "</div>" +
-      "</section>";
+      "</section>" +
+      '<div class="lightbox-overlay" id="lightboxOverlay">' +
+        '<button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close">' + closeIconSvg() + "</button>" +
+        '<button type="button" class="lightbox-nav lightbox-nav-prev" id="lightboxPrev" aria-label="Previous">' + chevronIconSvg() + "</button>" +
+        '<button type="button" class="lightbox-nav lightbox-nav-next" id="lightboxNext" aria-label="Next">' + chevronIconSvg() + "</button>" +
+        '<div class="lightbox-inner">' +
+          '<img id="lightboxImg" src="" alt="">' +
+          '<div class="lightbox-caption" id="lightboxCaption"></div>' +
+          '<div class="lightbox-credit" id="lightboxCredit"></div>' +
+        "</div>" +
+      "</div>";
 
     if (window.SamerI18N) window.SamerI18N.applyLanguage(document.documentElement.getAttribute("lang") || "ar");
+    if (galleryData.length) initLightbox(dest, galleryData);
+  }
+
+  /* ---------- Gallery lightbox ---------- */
+  function initLightbox(dest, galleryData) {
+    var overlay = document.getElementById("lightboxOverlay");
+    var img = document.getElementById("lightboxImg");
+    var captionEl = document.getElementById("lightboxCaption");
+    var creditEl = document.getElementById("lightboxCredit");
+    if (!overlay) return;
+
+    var current = 0;
+
+    function currentDict() {
+      return (window.SamerI18N && window.SamerI18N.getDict)
+        ? window.SamerI18N.getDict(document.documentElement.getAttribute("lang"))
+        : {};
+    }
+
+    function show(index) {
+      current = (index + galleryData.length) % galleryData.length;
+      var item = galleryData[current];
+      img.src = item.url;
+      var dict = currentDict();
+      captionEl.textContent = dict["dest_" + dest.id + "_" + item.attrKey] || "";
+      if (item.credit) {
+        creditEl.innerHTML =
+          (dict.photo_credit_label || "Photo:") + " " +
+          '<a href="' + item.credit.url + '" target="_blank" rel="noopener">' + item.credit.name + "</a> · " + item.credit.license;
+      } else {
+        creditEl.textContent = "";
+      }
+    }
+
+    function open(index) {
+      show(index);
+      overlay.classList.add("open");
+      document.body.style.overflow = "hidden";
+    }
+    function close() {
+      overlay.classList.remove("open");
+      document.body.style.overflow = "";
+    }
+
+    document.querySelectorAll(".gallery-tile").forEach(function (tile) {
+      tile.addEventListener("click", function () {
+        open(parseInt(tile.getAttribute("data-index"), 10) || 0);
+      });
+    });
+
+    document.getElementById("lightboxClose").addEventListener("click", close);
+    document.getElementById("lightboxPrev").addEventListener("click", function () { show(current - 1); });
+    document.getElementById("lightboxNext").addEventListener("click", function () { show(current + 1); });
+    overlay.addEventListener("click", function (e) {
+      if (e.target === overlay) close();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (!overlay.classList.contains("open")) return;
+      if (e.key === "Escape") close();
+      if (e.key === "ArrowLeft") show(current - 1);
+      if (e.key === "ArrowRight") show(current + 1);
+    });
   }
 
   document.addEventListener("DOMContentLoaded", function () {
