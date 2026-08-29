@@ -282,12 +282,18 @@ var FORM_ENDPOINT = window.SAMER_FORM_ENDPOINT;
         body: new FormData(form),
       })
         .then(function (response) {
-          if (response.ok) {
-            form.reset();
-            showStatus(successBox);
-          } else {
-            showStatus(errorBox);
-          }
+          return response.json().catch(function () { return null; }).then(function (data) {
+            // FormSubmit.co returns HTTP 200 even while a brand-new endpoint
+            // is still waiting on its one-time email activation click — so a
+            // 200 status alone isn't proof of real delivery; check the body.
+            var delivered = response.ok && (!data || data.success === undefined || data.success === "true" || data.success === true);
+            if (delivered) {
+              form.reset();
+              showStatus(successBox);
+            } else {
+              showStatus(errorBox);
+            }
+          });
         })
         .catch(function () {
           showStatus(errorBox);

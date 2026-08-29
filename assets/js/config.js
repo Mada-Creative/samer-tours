@@ -2,24 +2,20 @@
    Samer Tours — shared site configuration
    =========================================================
    FORM_ENDPOINT is used by both the booking form (booking.js) and the
-   homepage "call me back" form (contact-form.js), so it only needs to
-   be set in one place.
+   homepage "call me back" form (contact-form.js).
 
-   It's still a placeholder — Formspree retired the old "POST straight
-   to an email, no signup" trick in 2024, so a real endpoint now needs
-   a (free) Formspree account. To test the whole flow with
-   tareq.salame@gmail.com right now:
+   Currently set to FormSubmit.co, pointed at tareq.salame@gmail.com so
+   the whole flow can be tried out — no account/signup needed, just a
+   ONE-TIME step:
 
-   1. Go to https://formspree.io and sign up free with
-      tareq.salame@gmail.com (~60 seconds, no card needed).
-   2. Create a new form — Formspree gives you an endpoint that looks
-      like "https://formspree.io/f/xxxxabcd".
-   3. Paste it below, replacing the placeholder.
-   4. Submit a form once for real — Formspree sends a one-time
-      confirmation email first; after that, every submission lands in
-      that inbox.
+   1. Submit any form on the live site once.
+   2. Check tareq.salame@gmail.com for an email titled "Activate Form" —
+      that's normal, every new FormSubmit endpoint needs this once.
+   3. Click "Activate Form" in that email.
+   4. Submit the form again — from then on, every submission (booking
+      requests and contact requests) arrives by email instantly.
 
-   BEFORE GOING LIVE: swap this to Samer's own Formspree account/email
-   instead. See README.md for more.
+   BEFORE GOING LIVE: change the email below to Samer's own address
+   (also a one-time activation click, from his inbox instead).
    ========================================================= */
-window.SAMER_FORM_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+window.SAMER_FORM_ENDPOINT = "https://formsubmit.co/ajax/tareq.salame@gmail.com";
