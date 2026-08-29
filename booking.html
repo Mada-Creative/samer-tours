@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n-title="page_booking_title">احجز رحلتك القادمة | سامر ابو مخ</title>
+<meta name="description" content="احجز رحلتك القادمة مع سامر ابو مخ: اختر وجهة زرناها بأنفسنا أو اطلب وجهة جديدة، وحدد تواريخك وبياناتك وسنرسل لك عرضًا خلال 2-3 أيام عمل.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%230E4F4F'/%3E%3Cpath d='M12 5l2.5 5L20 12l-5.5 2L12 19l-2.5-5L4 12l5.5-2z' fill='%23C9A24B'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main" data-i18n="skip_to_content">تخطي إلى المحتوى</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <span data-i18n="brand_name">سامر ابو مخ</span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html" data-i18n="nav_home">الرئيسية</a>
+      <a href="destinations.html" data-i18n="nav_destinations">الوجهات</a>
+      <a href="booking.html" data-i18n="nav_booking">احجز رحلتك</a>
+      <a href="index.html#contact" data-i18n="nav_contact">تواصل معنا</a>
+    </nav>
+    <div class="header-actions">
+      <div class="lang-switch" role="group" aria-label="Language / اللغة">
+        <button type="button" class="lang-btn" data-lang="ar">AR</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <a href="booking.html" class="btn btn-primary btn-sm" data-i18n="nav_cta">احجز الآن</a>
+      <button class="nav-toggle" id="navToggle" aria-label="menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ PAGE HERO ============ -->
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html" data-i18n="nav_home">الرئيسية</a>
+        <span>/</span>
+        <span data-i18n="nav_booking">احجز رحلتك</span>
+      </div>
+      <div class="eyebrow" style="background:rgba(255,255,255,.14); color:#fff;" data-i18n="page_booking_eyebrow">الحجز</div>
+      <h1 class="page-hero-title" data-i18n="page_booking_title">احجز رحلتك القادمة</h1>
+      <p class="page-hero-sub" data-i18n="page_booking_subtitle">اختر من رحلاتنا السابقة أو أخبرنا بوجهة أحلامك، وسنرسل لك عرض رحلة مخصصًا خلال 2-3 أيام عمل.</p>
+    </div>
+  </section>
+
+  <!-- ============ BOOKING FORM ============ -->
+  <section>
+    <div class="container booking-layout">
+
+      <div>
+        <!-- Form card -->
+        <div class="booking-card" id="bookingFormCard">
+          <form id="bookingForm" novalidate>
+            <!-- Formspree helper fields -->
+            <input type="hidden" name="_subject" value="طلب حجز جديد من موقع سامر ابو مخ">
+            <input type="text" name="_gotcha" style="display:none">
+
+            <div class="form-section">
+              <div class="form-section-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-7.2 7-12a7 7 0 1 0-14 0c0 4.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                <span data-i18n="form_section_trip_title">تفاصيل الرحلة</span>
+              </div>
+
+              <!-- Trip type: single vs multi destination -->
+              <div class="form-group" style="margin-bottom:10px;">
+                <label data-i18n="trip_type_label">نوع الرحلة</label>
+              </div>
+              <div class="trip-type-toggle">
+                <label class="toggle-pill active" id="tripTypeSingleLabel">
+                  <input type="radio" name="trip_type" id="tripTypeSingle" value="single" checked>
+                  <span data-i18n="trip_type_single">وجهة واحدة</span>
+                </label>
+                <label class="toggle-pill" id="tripTypeMultiLabel">
+                  <input type="radio" name="trip_type" id="tripTypeMulti" value="multi">
+                  <span data-i18n="trip_type_multi">أكثر من وجهة</span>
+                </label>
+              </div>
+
+              <!-- Single destination block -->
+              <div id="singleDestBlock">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="destination" data-i18n="form_destination_label">الوجهة <span class="req">*</span></label>
+                    <select id="destination" name="destination" class="form-control js-destination-select" required>
+                      <option value="" data-i18n="form_destination_placeholder">اختر وجهة</option>
+                      <option value="other" data-i18n="form_destination_other">أخرى (حدد الوجهة)</option>
+                    </select>
+                  </div>
+                  <div class="form-group hidden" id="otherDestinationGroup">
+                    <label for="otherDestination" data-i18n="form_destination_other_label">اسم الوجهة المطلوبة</label>
+                    <input type="text" id="otherDestination" name="other_destination" class="form-control" data-i18n-placeholder="form_destination_other_placeholder" placeholder="مثال: باريس، فرنسا">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="dateFrom" data-i18n="form_date_from_label">تاريخ المغادرة <span class="req">*</span></label>
+                    <input type="date" id="dateFrom" name="date_from" class="form-control js-date-from" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="dateTo" data-i18n="form_date_to_label">تاريخ العودة <span class="req">*</span></label>
+                    <input type="date" id="dateTo" name="date_to" class="form-control js-date-to" required>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Multi destination block -->
+              <div id="multiDestBlock" class="hidden">
+                <div id="stopsContainer"><!-- stop rows injected by booking.js --></div>
+                <button type="button" class="btn btn-outline btn-sm add-stop-btn" id="addStopBtn" data-i18n="add_stop_button">+ أضف وجهة أخرى</button>
+              </div>
+
+              <p class="form-error-text hidden" id="dateError" data-i18n="form_error_dates">تاريخ العودة يجب أن يكون بعد تاريخ المغادرة</p>
+
+              <div class="form-row cols-3" style="margin-top:4px;">
+                <div class="form-group">
+                  <label for="adults" data-i18n="form_adults_label">البالغون</label>
+                  <input type="number" id="adults" name="adults" class="form-control" min="1" max="20" value="1">
+                </div>
+                <div class="form-group">
+                  <label for="children" data-i18n="form_children_label">الأطفال (2-11 سنة)</label>
+                  <input type="number" id="children" name="children" class="form-control" min="0" max="10" value="0">
+                </div>
+                <div class="form-group">
+                  <label for="infants" data-i18n="form_infants_label">الرضع (أقل من سنتين)</label>
+                  <input type="number" id="infants" name="infants" class="form-control" min="0" max="10" value="0">
+                </div>
+              </div>
+
+              <!-- Honeymoon -->
+              <div class="checkbox-row" style="margin-top:6px; margin-bottom:6px;">
+                <input type="checkbox" id="isHoneymoon" name="is_honeymoon">
+                <label for="isHoneymoon" data-i18n="honeymoon_toggle_label">هل هذه رحلة شهر عسل؟ 💍</label>
+              </div>
+
+              <div id="honeymoonBlock" class="hidden">
+                <div class="form-group" style="margin-top:14px; margin-bottom:6px;">
+                  <label data-i18n="honeymoon_know_dest_label">هل تعرفان الوجهة التي تريدان زيارتها؟</label>
+                </div>
+                <div class="trip-type-toggle" style="max-width:360px;">
+                  <label class="toggle-pill active" id="hmKnowYesLabel">
+                    <input type="radio" name="honeymoon_know_dest" id="hmKnowYes" value="yes" checked>
+                    <span data-i18n="yes_label">نعم</span>
+                  </label>
+                  <label class="toggle-pill" id="hmKnowNoLabel">
+                    <input type="radio" name="honeymoon_know_dest" id="hmKnowNo" value="no">
+                    <span data-i18n="no_label">لا، اقترحوا لنا</span>
+                  </label>
+                </div>
+
+                <div id="honeymoonQuizBlock" class="honeymoon-box hidden">
+                  <p style="font-weight:700; color:var(--color-primary-dark); margin-bottom:16px; font-size:.92rem;" data-i18n="honeymoon_quiz_intro">أجيبا عن الأسئلة التالية، وسيقترح سامر لكما وجهة شهر العسل المثالية:</p>
+
+                  <div class="quiz-question">
+                    <div class="quiz-question-title" data-i18n="hm_q1_title">1. ما هو الجو الذي تفضلانه لشهر العسل؟</div>
+                    <div class="quiz-options">
+                      <label class="quiz-option"><input type="radio" name="hm_q1_vibe" value="beach"><span data-i18n="hm_q1_opt1">شاطئ وشمس</span></label>
+                      <label class="quiz-option"><input type="radio" name="hm_q1_vibe" value="city"><span data-i18n="hm_q1_opt2">مدينة نابضة بالحياة</span></label>
+                      <label class="quiz-option"><input type="radio" name="hm_q1_vibe" value="nature"><span data-i18n="hm_q1_opt3">طبيعة وجبال</span></label>
+                      <label class="quiz-option"><input type="radio" name="hm_q1_vibe" value="culture"><span data-i18n="hm_q1_opt4">تاريخ وثقافة</span></label>
+                    </div>
+                  </div>
+
+                  <div class="quiz-question">
+                    <div class="quiz-question-title" data-i18n="hm_q2_title">2. ما هي ميزانيتكما التقريبية؟</div>
+                    <div class="quiz-options">
+                      <label class="quiz-option"><input type="radio" name="hm_q2_budget" value="budget"><span data-i18n="hm_q2_opt1">اقتصادية</span></label>
+                      <label class="quiz-option"><input type="radio" name="hm_q2_budget" value="mid"><span data-i18n="hm_q2_opt2">متوسطة</span></label>
+                      <label class="quiz-option"><input type="radio" name="hm_q2_budget" value="luxury"><span data-i18n="hm_q2_opt3">فاخرة</span></label>
+                    </div>
+                  </div>
+
+                  <div class="quiz-question">
+                    <div class="quiz-question-title" data-i18n="hm_q3_title">3. كم مدة رحلة شهر العسل؟</div>
+                    <div class="quiz-options">
+                      <label class="quiz-option"><input type="radio" name="hm_q3_duration" value="short"><span data-i18n="hm_q3_opt1">أقل من أسبوع</span></label>
+                      <label class="quiz-option"><input type="radio" name="hm_q3_duration" value="medium"><span data-i18n="hm_q3_opt2">أسبوع إلى أسبوعين</span></label>
+                      <label class="quiz-option"><input type="radio" name="hm_q3_duration" value="long"><span data-i18n="hm_q3_opt3">أكثر من أسبوعين</span></label>
+                    </div>
+                  </div>
+
+                  <div class="quiz-question">
+                    <div class="quiz-question-title" data-i18n="hm_q4_title">4. في أي موسم تخططان للسفر؟</div>
+                    <div class="quiz-options">
+                      <label class="quiz-option"><input type="radio" name="hm_q4_season" value="winter"><span data-i18n="hm_q4_opt1">الشتاء</span></label>
+                      <label class="quiz-option"><input type="radio" name="hm_q4_season" value="spring"><span data-i18n="hm_q4_opt2">الربيع</span></label>
+                      <label class="quiz-option"><input type="radio" name="hm_q4_season" value="summer"><span data-i18n="hm_q4_opt3">الصيف</span></label>
+                      <label class="quiz-option"><input type="radio" name="hm_q4_season" value="autumn"><span data-i18n="hm_q4_opt4">الخريف</span></label>
+                    </div>
+                  </div>
+
+                  <div class="quiz-question">
+                    <div class="quiz-question-title" data-i18n="hm_q5_title">5. ما مستوى النشاط الذي تفضلانه؟</div>
+                    <div class="quiz-options">
+                      <label class="quiz-option"><input type="radio" name="hm_q5_activity" value="relax"><span data-i18n="hm_q5_opt1">استرخاء تام</span></label>
+                      <label class="quiz-option"><input type="radio" name="hm_q5_activity" value="mix"><span data-i18n="hm_q5_opt2">مزيج من الاسترخاء والاستكشاف</span></label>
+                      <label class="quiz-option"><input type="radio" name="hm_q5_activity" value="adventure"><span data-i18n="hm_q5_opt3">مغامرة ونشاط</span></label>
+                    </div>
+                  </div>
+
+                  <div class="quiz-question">
+                    <div class="quiz-question-title" data-i18n="hm_q6_title">6. هل تفضلان الابتعاد عن صخب المدن؟</div>
+                    <div class="quiz-options">
+                      <label class="quiz-option"><input type="radio" name="hm_q6_quiet" value="quiet"><span data-i18n="hm_q6_opt1">نعم، نفضل الهدوء</span></label>
+                      <label class="quiz-option"><input type="radio" name="hm_q6_quiet" value="city_buzz"><span data-i18n="hm_q6_opt2">لا، نحب حيوية المدن</span></label>
+                      <label class="quiz-option"><input type="radio" name="hm_q6_quiet" value="no_preference"><span data-i18n="hm_q6_opt3">لا فرق لدينا</span></label>
+                    </div>
+                  </div>
+
+                  <div class="quiz-question">
+                    <div class="quiz-question-title" data-i18n="hm_q7_title">7. ما الذي يهمكما أكثر في الوجهة؟</div>
+                    <div class="quiz-options">
+                      <label class="quiz-option"><input type="radio" name="hm_q7_priority" value="food"><span data-i18n="hm_q7_opt1">المأكولات المحلية</span></label>
+                      <label class="quiz-option"><input type="radio" name="hm_q7_priority" value="scenery"><span data-i18n="hm_q7_opt2">المناظر الطبيعية</span></label>
+                      <label class="quiz-option"><input type="radio" name="hm_q7_priority" value="shopping"><span data-i18n="hm_q7_opt3">التسوق والفعاليات</span></label>
+                      <label class="quiz-option"><input type="radio" name="hm_q7_priority" value="romance"><span data-i18n="hm_q7_opt4">الخصوصية والرومانسية</span></label>
+                    </div>
+                  </div>
+
+                  <div class="quiz-question">
+                    <div class="quiz-question-title" data-i18n="hm_q8_title">8. هل هناك وجهة كانت تراودكما دائمًا؟ (اختياري)</div>
+                    <input type="text" name="hm_q8_dream_destination" class="form-control" data-i18n-placeholder="hm_q8_placeholder" placeholder="مثال: جزر المالديف، اليابان...">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <div class="form-section-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+                <span data-i18n="form_section_contact_title">بيانات التواصل</span>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName" data-i18n="form_first_name_label">الاسم الأول <span class="req">*</span></label>
+                  <input type="text" id="firstName" name="first_name" class="form-control" required data-i18n-placeholder="form_first_name_placeholder" placeholder="مثال: أحمد">
+                </div>
+                <div class="form-group">
+                  <label for="lastName" data-i18n="form_last_name_label">اسم العائلة <span class="req">*</span></label>
+                  <input type="text" id="lastName" name="last_name" class="form-control" required data-i18n-placeholder="form_last_name_placeholder" placeholder="مثال: العلي">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="phone" data-i18n="form_phone_label">رقم الهاتف <span class="req">*</span></label>
+                  <input type="tel" id="phone" name="phone" class="form-control" required data-i18n-placeholder="form_phone_placeholder" placeholder="مثال: +966 5XXXXXXXX">
+                </div>
+                <div class="form-group">
+                  <label for="whatsapp" data-i18n="form_whatsapp_label">رقم الواتساب <span class="req">*</span></label>
+                  <input type="tel" id="whatsapp" name="whatsapp" class="form-control" required data-i18n-placeholder="form_whatsapp_placeholder" placeholder="مثال: +966 5XXXXXXXX">
+                  <div class="checkbox-row" style="margin-top:4px;">
+                    <input type="checkbox" id="whatsappSame">
+                    <label for="whatsappSame" data-i18n="form_whatsapp_same">نفس رقم الهاتف</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-bottom:20px;">
+                <label for="notes" data-i18n="form_notes_label">ملاحظات إضافية (اختياري)</label>
+                <textarea id="notes" name="notes" class="form-control" data-i18n-placeholder="form_notes_placeholder" placeholder="أي تفاصيل تودّ إخبارنا بها عن رحلتك..."></textarea>
+              </div>
+
+              <div class="checkbox-row" style="margin-bottom:22px;">
+                <input type="checkbox" id="consent" name="consent" required>
+                <label for="consent" data-i18n="form_consent_label">أوافق على أن يتواصل معي فريق سامر ابو مخ بخصوص هذا الطلب</label>
+              </div>
+
+              <div class="form-offer-note">
+                <span data-i18n="form_offer_note">📩 سنراجع طلبك ونرسل لك عرض رحلة مخصصًا خلال 2-3 أيام عمل.</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="submitBtn" style="margin-top:22px;">
+                <span id="submitLabel" data-i18n="form_submit_button">إرسال طلب الحجز</span>
+              </button>
+              <p class="form-note" style="text-align:center; margin-top:12px;" data-i18n="form_required_note">الحقول المميزة بـ * مطلوبة</p>
+            </div>
+          </form>
+        </div>
+
+        <!-- Success state -->
+        <div class="form-status success hidden" id="formSuccess">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>
+          <div>
+            <div class="form-status-title" data-i18n="form_success_title">تم استلام طلبك بنجاح!</div>
+            <div class="form-status-text" data-i18n="form_success_text">شكرًا لك. سنراجع طلبك ونرسل لك عرض رحلة مخصصًا خلال 2-3 أيام عمل عبر الهاتف أو الواتساب.</div>
+            <button type="button" class="btn btn-outline btn-sm" style="margin-top:18px;" data-reset-form data-i18n="form_success_new">إرسال طلب جديد</button>
+          </div>
+        </div>
+
+        <!-- Error state -->
+        <div class="form-status error hidden" id="formError">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16h.01"/></svg>
+          <div>
+            <div class="form-status-title" data-i18n="form_error_title">لم نتمكن من إرسال طلبك</div>
+            <div class="form-status-text" data-i18n="form_error_text">حدث خطأ أثناء إرسال الطلب. حاول مرة أخرى أو تواصل معنا مباشرة عبر الواتساب.</div>
+            <button type="button" class="btn btn-outline btn-sm" style="margin-top:18px;" data-reset-form data-i18n="form_success_new">إرسال طلب جديد</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="booking-sidebar">
+        <div class="side-card reveal">
+          <div class="side-card-title" data-i18n="booking_sidebar_title">تفضل التواصل المباشر؟</div>
+          <p class="side-card-text" data-i18n="booking_sidebar_text">يسعدنا أيضًا التحدث معك مباشرة لتخطيط رحلتك.</p>
+          <a href="tel:+972547448028" class="side-contact-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .7 2.9a2 2 0 0 1-.4 2.1L8 10a16 16 0 0 0 6 6l1.3-1.4a2 2 0 0 1 2.1-.4c.9.4 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></svg>
+            <span data-i18n="booking_call_us">اتصل بنا</span>
+          </a>
+          <a href="https://wa.me/972547448028" target="_blank" rel="noopener" class="side-contact-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1.4-4A8 8 0 1 1 9 19.6z"/></svg>
+            <span data-i18n="booking_whatsapp_us">راسلنا على واتساب</span>
+          </a>
+          <a href="mailto:info@samertours.example" class="side-contact-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            <span data-i18n="booking_email_us">راسلنا بالبريد</span>
+          </a>
+        </div>
+
+        <div class="side-card reveal reveal-delay-1">
+          <div class="side-card-title" data-i18n="booking_steps_title">كيف تسير عملية الحجز؟</div>
+          <div class="side-card-mini-list">
+            <div class="side-card-mini-item">
+              <span class="side-card-mini-num">1</span>
+              <div class="side-card-mini-text"><strong data-i18n="booking_step_1_title">أرسل طلبك</strong><span data-i18n="booking_step_1_desc">عبّئ النموذج ببيانات رحلتك، ونستلم طلبك فورًا.</span></div>
+            </div>
+            <div class="side-card-mini-item">
+              <span class="side-card-mini-num">2</span>
+              <div class="side-card-mini-text"><strong data-i18n="booking_step_2_title">نراجع طلبك</strong><span data-i18n="booking_step_2_desc">يجهز فريقنا عرض رحلة مخصصًا لك خلال 2-3 أيام عمل.</span></div>
+            </div>
+            <div class="side-card-mini-item">
+              <span class="side-card-mini-num">3</span>
+              <div class="side-card-mini-text"><strong data-i18n="booking_step_3_title">نتواصل معك بالعرض</strong><span data-i18n="booking_step_3_desc">نرسل لك تفاصيل الرحلة والسعر النهائي عبر الهاتف أو الواتساب.</span></div>
+            </div>
+            <div class="side-card-mini-item">
+              <span class="side-card-mini-num">4</span>
+              <div class="side-card-mini-text"><strong data-i18n="booking_step_4_title">استمتع برحلتك</strong><span data-i18n="booking_step_4_desc">نبقى بجانبك بالدعم من أول يوم حتى عودتك.</span></div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <span data-i18n="brand_name">سامر ابو مخ</span>
+        </div>
+        <p class="footer-about-text" data-i18n="footer_about_text">وكالة سفر تنظّم رحلاتك بخبرة حقيقية. كل وجهة نرشّحها لك، زرناها بأنفسنا أولًا.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/samer315/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M4 20l1.4-4A8 8 0 1 1 9 19.6z"/></svg></a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title" data-i18n="footer_links_title">روابط سريعة</div>
+        <div class="footer-links">
+          <a href="index.html" data-i18n="nav_home">الرئيسية</a>
+          <a href="destinations.html" data-i18n="nav_destinations">الوجهات</a>
+          <a href="booking.html" data-i18n="nav_booking">احجز رحلتك</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title" data-i18n="footer_destinations_title">وجهاتنا</div>
+        <div class="footer-links">
+          <a href="destination.html?id=madrid" data-i18n="dest_madrid_name">مدريد</a>
+          <a href="destination.html?id=valencia" data-i18n="dest_valencia_name">فالنسيا</a>
+          <a href="destination.html?id=milano" data-i18n="dest_milano_name">ميلانو</a>
+          <a href="destination.html?id=dubai" data-i18n="dest_dubai_name">دبي</a>
+          <a href="destinations.html" data-i18n="view_all_destinations">عرض جميع الوجهات</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title" data-i18n="footer_contact_title">تواصل معنا</div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .7 2.9a2 2 0 0 1-.4 2.1L8 10a16 16 0 0 0 6 6l1.3-1.4a2 2 0 0 1 2.1-.4c.9.4 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></svg>
+          <span data-i18n="footer_phone_value">+972 54-744-8028</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          <span data-i18n="footer_email_value">info@samertours.example</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-7.2 7-12a7 7 0 1 0-14 0c0 4.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          <span data-i18n="footer_address_value">ألمانيا</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> <span data-i18n="brand_name">سامر ابو مخ</span> — <span data-i18n="footer_rights">جميع الحقوق محفوظة.</span></span>
+      <span class="footer-credit-wrap"><span data-i18n="footer_credit">تصميم وتطوير الموقع بواسطة</span> <a href="https://mada-creative.github.io/madabytarek/" target="_blank" rel="noopener" class="footer-credit-link">MadaByTarek</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ FLOATING WHATSAPP BUTTON ============ -->
+<a href="https://wa.me/972547448028" target="_blank" rel="noopener" class="whatsapp-float" data-i18n-aria-label="whatsapp_float_label" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32" fill="#fff"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-2.1c1.9 1.1 4 1.6 6 1.6 7 0 12.7-5.6 12.7-12.5C28.7 8.6 23 3 16 3zm0 22.7c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.2 1.2 1.2-4-.3-.4a10.1 10.1 0 0 1-1.6-5.4c0-5.6 4.6-10.1 10.6-10.1s10.6 4.5 10.6 10.1S22 25.7 16 25.7zm5.8-7.6c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.1.2 2.1 3.2 5.1 4.4.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.2-.6-.4z"/></svg>
+</a>
+
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/destinations-data.js"></script>
+<script src="assets/js/render-destinations.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/booking.js"></script>
+</body>
+</html>

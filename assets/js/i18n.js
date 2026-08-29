@@ -1,0 +1,946 @@
+/* =========================================================
+   Samer Tours — i18n dictionary + language switching engine
+   Default language: Arabic (RTL). Toggle: English (LTR).
+   To rename the brand, just edit `brand_name` below.
+   NOTE: numbers are intentionally written with Western digits
+   (1, 2, 3...) even in the Arabic dictionary, per client request.
+   ========================================================= */
+
+window.SITE_I18N = {
+  ar: {
+    /* Header / nav */
+    skip_to_content: "تخطي إلى المحتوى",
+    brand_name: "سامر ابو مخ",
+    nav_home: "الرئيسية",
+    nav_destinations: "الوجهات",
+    nav_booking: "احجز رحلتك",
+    nav_contact: "تواصل معنا",
+    nav_cta: "احجز الآن",
+
+    /* Hero */
+    hero_eyebrow: "وكالة سفر بخبرة حقيقية",
+    hero_title: "نخطط رحلتك بخبرة زُرناها نحن بأنفسنا",
+    hero_subtitle: "لا نبيعك وجهة من كتالوج. كل مكان تراه هنا زرناه فعلًا، وعشنا تفاصيله، لنقدّم لك خطة سفر واقعية ومضمونة من أول يوم حتى العودة.",
+    hero_cta_primary: "استكشف الوجهات",
+    hero_cta_secondary: "احجز رحلتك الآن",
+    hero_photo_alt: "سامر ابو مخ في إحدى رحلاته",
+    hero_photo_role: "مؤسس ومنظّم رحلات",
+    hero_photo_placeholder_text: "أضف صورة سامر هنا: assets/img/samer-hero.jpg",
+    stat_destinations_number: "25+",
+    stat_destinations_label: "وجهة زرناها بأنفسنا",
+    stat_years_number: "1",
+    stat_years_label: "سنة خبرة في تنظيم الرحلات",
+    stat_travelers_number: "30+",
+    stat_travelers_label: "مسافر وثقوا برحلتهم معنا",
+
+    /* About */
+    about_eyebrow: "قصتنا",
+    about_title: "لماذا سامر ابو مخ؟",
+    about_text: "قبل أن نرشّح لك أي وجهة، نكون قد زرناها بأنفسنا: مشينا في شوارعها، جرّبنا مطاعمها، واكتشفنا أماكنها السياحية عن قرب. هذا يعني أن كل نصيحة نقدّمها لك مبنية على تجربة حقيقية، لا على صور من الإنترنت.",
+    about_point_1_title: "نزورها بأنفسنا أولًا",
+    about_point_1_desc: "كل وجهة نعرضها لك، مررنا بها شخصيًا قبل أن نضعها في برامجنا.",
+    about_point_2_title: "خطة مصمّمة خصيصًا لك",
+    about_point_2_desc: "تواريخ سفرك وعدد أيامك ورغباتك، نبني حولها البرنامج بالكامل.",
+    about_point_3_title: "دعم طوال الرحلة",
+    about_point_3_desc: "نبقى على تواصل معك عبر الهاتف والواتساب من الحجز حتى العودة.",
+    about_quote: "«السفر تجربة، ونحن نحرص أن نعيشها أولًا قبل أن نشاركها معك.»",
+    about_quote_name: "سامر ابو مخ",
+    about_quote_role: "منظّم رحلات",
+
+    /* Featured destinations (home) */
+    section_destinations_eyebrow: "رحلاتنا السابقة",
+    section_destinations_title: "وجهات زرناها بأنفسنا",
+    section_destinations_subtitle: "تعرّف على المدن التي زرناها واستكشفنا أماكنها السياحية بأنفسنا، تمهيدًا لتصميم رحلتك القادمة.",
+    view_all_destinations: "عرض جميع الوجهات",
+    card_learn_more: "اكتشف المزيد",
+
+    /* Why choose us */
+    why_eyebrow: "مميزاتنا",
+    why_title: "لماذا يختارنا المسافرون؟",
+    why_1_title: "تجربة واقعية",
+    why_1_desc: "توصياتنا مبنية على زيارات فعلية، لا على معلومات منسوخة.",
+    why_2_title: "تخطيط شخصي بالكامل",
+    why_2_desc: "نصمم رحلتك حسب تواريخك وميزانيتك وعدد المسافرين معك.",
+    why_3_title: "أسعار واضحة وشفافة",
+    why_3_desc: "لا رسوم مخفية، تعرف تكلفة رحلتك بالتفصيل من البداية.",
+    why_4_title: "دعم مستمر أثناء السفر",
+    why_4_desc: "فريقنا على تواصل معك عبر الواتساب طوال أيام رحلتك.",
+
+    /* CTA banner */
+    cta_banner_title: "جاهز لرحلتك القادمة؟",
+    cta_banner_sub: "أخبرنا بالوجهة والتواريخ التي تناسبك، وسنتولى الباقي.",
+    cta_banner_button: "ابدأ الحجز الآن",
+
+    /* Footer */
+    footer_about_text: "وكالة سفر تنظّم رحلاتك بخبرة حقيقية. كل وجهة نرشّحها لك، زرناها بأنفسنا أولًا.",
+    footer_links_title: "روابط سريعة",
+    footer_destinations_title: "وجهاتنا",
+    footer_contact_title: "تواصل معنا",
+    footer_phone_value: "+972 54-744-8028",
+    footer_email_value: "info@samertours.example",
+    footer_address_value: "ألمانيا",
+    footer_rights: "جميع الحقوق محفوظة.",
+    footer_credit: "تصميم وتطوير الموقع بواسطة",
+
+    /* Destinations page */
+    page_destinations_eyebrow: "الوجهات",
+    page_destinations_title: "الوجهات التي زرناها",
+    page_destinations_subtitle: "كل وجهة أدناه زرناها بأنفسنا وجرّبنا أبرز أماكنها السياحية. اضغط على «التفاصيل» لعرض المزيد، أو «احجز هذه الوجهة» للبدء مباشرة.",
+    attractions_title: "أبرز الأماكن السياحية التي زرناها",
+    book_this_destination: "احجز هذه الوجهة",
+    dest_details_toggle: "التفاصيل والأماكن التي زرناها",
+    other_dest_title: "لا ترى وجهتك المفضلة هنا؟",
+    other_dest_text: "يمكنك طلب أي وجهة أخرى حول العالم، وسنخطط لها رحلتك بنفس الاهتمام.",
+    other_dest_cta: "اطلب وجهتك الآن",
+
+    /* Regions */
+    region_southern_europe_name: "جنوب أوروبا",
+    region_france_benelux_name: "فرنسا ودول البنلوكس",
+    region_germany_austria_name: "ألمانيا والنمسا",
+    region_uk_name: "المملكة المتحدة",
+    region_scandinavia_arctic_name: "الدول الاسكندنافية والقطب الشمالي",
+    region_eastern_europe_baltics_name: "أوروبا الشرقية ودول البلطيق",
+    region_middle_east_name: "الشرق الأوسط",
+
+    /* Destination content */
+    dest_madrid_name: "مدريد", dest_madrid_country: "إسبانيا",
+    dest_madrid_tagline: "عاصمة نابضة بالفن والحياة الليلية",
+    dest_madrid_desc: "قضينا أسبوعًا كاملًا نتجول بين متاحف مدريد العريقة، ونتذوق أطباق التاباس في أزقتها، ونعيش سهراتها التي لا تهدأ. مدريد مزيج ساحر بين العراقة الملكية والحيوية العصرية.",
+    dest_madrid_attr_1: "بوابة الشمس (بويرتا ديل سول)",
+    dest_madrid_attr_2: "القصر الملكي",
+    dest_madrid_attr_3: "متحف برادو",
+    dest_madrid_attr_4: "حديقة الريتيرو",
+    dest_madrid_attr_5: "شارع جران فيا",
+
+    dest_valencia_name: "فالنسيا", dest_valencia_country: "إسبانيا",
+    dest_valencia_tagline: "شمس وشواطئ وعمارة مستقبلية",
+    dest_valencia_desc: "فالنسيا فاجأتنا بمزيجها الفريد بين المدينة القديمة وحي العلوم المستقبلي. تجولنا على شاطئ المالفاروسا، وتذوقنا الباييا الأصلية في مطعم محلي صغير، وقضينا أمسية هادئة بين ممرات مدينة الفنون والعلوم.",
+    dest_valencia_attr_1: "مدينة الفنون والعلوم",
+    dest_valencia_attr_2: "بورصة الحرير (لا لونخا)",
+    dest_valencia_attr_3: "شاطئ المالفاروسا",
+    dest_valencia_attr_4: "السوق المركزي",
+    dest_valencia_attr_5: "حي الكارمن",
+
+    dest_milano_name: "ميلانو", dest_milano_country: "إيطاليا",
+    dest_milano_tagline: "أناقة إيطالية بين التاريخ والموضة",
+    dest_milano_desc: "في ميلانو، وقفنا مبهورين أمام تفاصيل كاتدرائية دومو الرخامية، وتسوقنا بين محلات الموضة العالمية في غاليريا فيتوريو إيمانويلي، وأنهينا يومنا بأمسية هادئة على قناة نافيلي.",
+    dest_milano_attr_1: "كاتدرائية ميلانو (دومو)",
+    dest_milano_attr_2: "غاليريا فيتوريو إيمانويلي الثاني",
+    dest_milano_attr_3: "قلعة سفورزيسكو",
+    dest_milano_attr_4: "مسرح لاسكالا",
+    dest_milano_attr_5: "حي نافيلي",
+
+    dest_amsterdam_name: "أمستردام", dest_amsterdam_country: "هولندا",
+    dest_amsterdam_tagline: "قنوات مائية وتاريخ عريق على كل زاوية",
+    dest_amsterdam_desc: "استأجرنا دراجات وتجولنا حول قنوات أمستردام الشهيرة، وزرنا بيت آنا فرانك في زيارة مؤثرة، وأنهينا يومنا بنزهة هادئة في حديقة فوندل بين السكان المحليين.",
+    dest_amsterdam_attr_1: "متحف ريكس (رايكس ميوزيوم)",
+    dest_amsterdam_attr_2: "بيت آنا فرانك",
+    dest_amsterdam_attr_3: "حديقة فوندل",
+    dest_amsterdam_attr_4: "حزام القنوات",
+    dest_amsterdam_attr_5: "حي جوردان",
+
+    dest_oslo_name: "أوسلو", dest_oslo_country: "النرويج",
+    dest_oslo_tagline: "طبيعة إسكندنافية هادئة وفنون معاصرة",
+    dest_oslo_desc: "في أوسلو، تجولنا بين منحوتات حديقة فيغيلاند الفريدة، ووقفنا أمام العمارة الجريئة لدار الأوبرا المطلة على المضيق، واكتشفنا تاريخ الفايكنج في متحفهم المخصص.",
+    dest_oslo_attr_1: "حديقة فيغيلاند",
+    dest_oslo_attr_2: "دار أوسلو للأوبرا",
+    dest_oslo_attr_3: "متحف سفن الفايكنج",
+    dest_oslo_attr_4: "قلعة أكرشوس",
+    dest_oslo_attr_5: "شارع كارل يوهانس",
+
+    dest_madeira_name: "ماديرا", dest_madeira_country: "البرتغال",
+    dest_madeira_tagline: "جزيرة أطلسية بين الجبال الخضراء والمحيط",
+    dest_madeira_desc: "في ماديرا، مشينا على ممرات الليفادا الخضراء المحاذية للجبال، وركبنا التلفريك المطل على فونشال، وتذوقنا نبيذ ماديرا الأصلي في أحد المصانع المحلية.",
+    dest_madeira_attr_1: "ممرات الليفادا الخضراء",
+    dest_madeira_attr_2: "نقطة كابو جيراو (الجرف الزجاجي)",
+    dest_madeira_attr_3: "مدينة فونشال القديمة",
+    dest_madeira_attr_4: "حديقة مونتي الاستوائية",
+    dest_madeira_attr_5: "قمة بيكو دو أرييرو",
+
+    dest_metz_name: "ميتز", dest_metz_country: "فرنسا",
+    dest_metz_tagline: "مدينة فرنسية هادئة بعمارة قوطية ونوافذ زجاجية ساحرة",
+    dest_metz_desc: "في ميتز، وقفنا مطولًا أمام نوافذ كاتدرائية سانت إتيان الزجاجية الملونة، وتجولنا حول مركز بومبيدو ميتز الحديث، وقضينا أمسية هادئة على ضفاف نهر الموزيل.",
+    dest_metz_attr_1: "كاتدرائية سانت إتيان",
+    dest_metz_attr_2: "مركز بومبيدو ميتز",
+    dest_metz_attr_3: "ساحة سان لوي",
+    dest_metz_attr_4: "متحف لا كور دور",
+    dest_metz_attr_5: "ضفاف نهر الموزيل",
+
+    dest_brussels_name: "بروكسل", dest_brussels_country: "بلجيكا",
+    dest_brussels_tagline: "عاصمة أوروبية بطابع تاريخي ومعماري مميز",
+    dest_brussels_desc: "في بروكسل، وقفنا مبهورين وسط ساحة غراند بلاس المذهلة، وصعدنا إلى كرات الأتوميوم الشهيرة، وتجولنا في الأزقة القديمة المحيطة بالمدينة القديمة.",
+    dest_brussels_attr_1: "ساحة غراند بلاس",
+    dest_brussels_attr_2: "الأتوميوم",
+    dest_brussels_attr_3: "تمثال مانيكين بيس",
+    dest_brussels_attr_4: "القصر الملكي",
+    dest_brussels_attr_5: "حي مون دي زار",
+
+    dest_luxembourg_name: "لوكسمبورغ", dest_luxembourg_country: "لوكسمبورغ",
+    dest_luxembourg_tagline: "مدينة صغيرة بقلاع وحصون فوق أودية خضراء",
+    dest_luxembourg_desc: "في لوكسمبورغ، تجولنا بين أنفاق حصن بوك التاريخية، ووقفنا على جسر أدولف المطل على الوادي، ونزلنا إلى حي غروند الجميل عند سفح المدينة القديمة.",
+    dest_luxembourg_attr_1: "حصن بوك (الكازيمات)",
+    dest_luxembourg_attr_2: "جسر أدولف",
+    dest_luxembourg_attr_3: "حي غروند",
+    dest_luxembourg_attr_4: "كاتدرائية نوتردام",
+    dest_luxembourg_attr_5: "ممشى كورنيش",
+
+    dest_dortmund_name: "دورتموند", dest_dortmund_country: "ألمانيا",
+    dest_dortmund_tagline: "مدينة ألمانية نابضة بالرياضة والصناعة الحديثة",
+    dest_dortmund_desc: "في دورتموند، زرنا ملعب سيغنال إيدونا بارك الأسطوري، وصعدنا برج فلوريان المطل على المدينة، واكتشفنا تحول أبراج المصانع القديمة إلى مساحات ثقافية في برج يو.",
+    dest_dortmund_attr_1: "ملعب سيغنال إيدونا بارك",
+    dest_dortmund_attr_2: "برج فلوريان (وستفالن بارك)",
+    dest_dortmund_attr_3: "برج يو (متحف الفن)",
+    dest_dortmund_attr_4: "كنيسة راينولدي",
+    dest_dortmund_attr_5: "الساحة القديمة",
+
+    dest_munich_name: "ميونيخ", dest_munich_country: "ألمانيا",
+    dest_munich_tagline: "عاصمة بافاريا بين التقاليد العريقة والحدائق الخضراء",
+    dest_munich_desc: "في ميونيخ، شاهدنا عرض الساعة الموسيقية في ساحة ماريين بلاتس، وتمشينا في الحديقة الإنجليزية الواسعة، وتجولنا بين أكشاك سوق فيكتواليين التقليدي.",
+    dest_munich_attr_1: "ساحة ماريين بلاتس ومبنى البلدية الجديد",
+    dest_munich_attr_2: "كنيسة فراونكيرشه (السيدة العذراء)",
+    dest_munich_attr_3: "الحديقة الإنجليزية",
+    dest_munich_attr_4: "قصر نيمفنبورغ",
+    dest_munich_attr_5: "سوق فيكتواليين",
+
+    dest_hallstatt_name: "هالشتات", dest_hallstatt_country: "النمسا",
+    dest_hallstatt_tagline: "قرية جبلية ساحرة على ضفاف بحيرة صافية",
+    dest_hallstatt_desc: "في هالشتات، ركبنا القارب عبر البحيرة الصافية المحاطة بالجبال، وصعدنا إلى منصة الإطلالة (سكاي ووك)، وزرنا منجم الملح الذي جعل القرية مشهورة منذ قرون.",
+    dest_hallstatt_attr_1: "بحيرة هالشتات",
+    dest_hallstatt_attr_2: "منصة الإطلالة (سكاي ووك)",
+    dest_hallstatt_attr_3: "منجم الملح",
+    dest_hallstatt_attr_4: "الساحة الرئيسية للقرية",
+    dest_hallstatt_attr_5: "مقبرة العظام (بينهاوس)",
+
+    dest_vienna_name: "فيينا", dest_vienna_country: "النمسا",
+    dest_vienna_tagline: "عاصمة الموسيقى الكلاسيكية والقصور الإمبراطورية",
+    dest_vienna_desc: "في فيينا، تجولنا في حدائق قصر شونبرون الواسعة، ووقفنا أمام كاتدرائية القديس إستيفان الشهيرة، وحضرنا أمسية موسيقية في دار أوبرا فيينا.",
+    dest_vienna_attr_1: "قصر شونبرون",
+    dest_vienna_attr_2: "كاتدرائية القديس إستيفان",
+    dest_vienna_attr_3: "قصر بلفيدير",
+    dest_vienna_attr_4: "دار أوبرا فيينا",
+    dest_vienna_attr_5: "سوق ناشماركت",
+
+    dest_innsbruck_name: "إنسبروك", dest_innsbruck_country: "النمسا",
+    dest_innsbruck_tagline: "مدينة جبلية تحيط بها قمم الألب من كل جانب",
+    dest_innsbruck_desc: "في إنسبروك، وقفنا أمام السقف الذهبي الشهير وسط المدينة القديمة، وركبنا التلفريك صعودًا إلى قمم نوردكيته المغطاة بالثلوج، وزرنا عالم كريستال سواروفسكي الساحر.",
+    dest_innsbruck_attr_1: "السقف الذهبي",
+    dest_innsbruck_attr_2: "جبال نوردكيته والتلفريك",
+    dest_innsbruck_attr_3: "عالم كريستال سواروفسكي",
+    dest_innsbruck_attr_4: "قلعة أمبراس",
+    dest_innsbruck_attr_5: "المدينة القديمة",
+
+    dest_edinburgh_name: "إدنبرة", dest_edinburgh_country: "اسكتلندا، المملكة المتحدة",
+    dest_edinburgh_tagline: "عاصمة اسكتلندية بقلعة تاريخية فوق تلة صخرية",
+    dest_edinburgh_desc: "في إدنبرة، تسلقنا التلة الصخرية إلى قلعة إدنبرة التاريخية، ومشينا على طول شارع الميل الملكي، وصعدنا إلى قمة مقعد آرثر للاستمتاع بإطلالة بانورامية على المدينة.",
+    dest_edinburgh_attr_1: "قلعة إدنبرة",
+    dest_edinburgh_attr_2: "شارع الميل الملكي",
+    dest_edinburgh_attr_3: "مقعد آرثر",
+    dest_edinburgh_attr_4: "قصر هوليرود",
+    dest_edinburgh_attr_5: "المدينة القديمة",
+
+    dest_wales_name: "ويلز", dest_wales_country: "المملكة المتحدة",
+    dest_wales_tagline: "طبيعة جبلية خلابة وقلاع من القرون الوسطى",
+    dest_wales_desc: "في ويلز، تجولنا بين قمم جبال سنودونيا الخضراء، وزرنا قلعة كونوي المطلة على الساحل، واكتشفنا القرية الملونة الفريدة بورتميريون.",
+    dest_wales_attr_1: "حديقة سنودونيا الوطنية",
+    dest_wales_attr_2: "قلعة كونوي",
+    dest_wales_attr_3: "قلعة كارديف",
+    dest_wales_attr_4: "ساحل بيمبروكشير",
+    dest_wales_attr_5: "قرية بورتميريون",
+
+    dest_bath_name: "باث", dest_bath_country: "إنجلترا، المملكة المتحدة",
+    dest_bath_tagline: "مدينة إنجليزية أثرية بحمامات رومانية وعمارة جورجية",
+    dest_bath_desc: "في مدينة باث، زرنا الحمامات الرومانية القديمة التي لا تزال تنبض بالحياة، ووقفنا أمام واجهة الهلال الملكي الأنيقة، وعبرنا جسر بولتيني الفريد فوق النهر.",
+    dest_bath_attr_1: "الحمامات الرومانية",
+    dest_bath_attr_2: "كنيسة باث الكبرى",
+    dest_bath_attr_3: "الهلال الملكي",
+    dest_bath_attr_4: "جسر بولتيني",
+    dest_bath_attr_5: "ساحة السيركس",
+
+    dest_longyearbyen_name: "لونغيرباين", dest_longyearbyen_country: "سفالبارد، النرويج",
+    dest_longyearbyen_tagline: "أقصى نقطة مأهولة في الشمال، حيث يلتقي الجليد بالسماء",
+    dest_longyearbyen_desc: "في لونغيرباين، شاهدنا جبال الجليد والمضايق الشاسعة في جزيرة سفالبارد القطبية، وجربنا ركوب زلاجات الكلاب فوق الثلوج، وتعرفنا على تاريخ المنطقة الفريد في متحف سفالبارد.",
+    dest_longyearbyen_attr_1: "جولات الجليديات والمضايق",
+    dest_longyearbyen_attr_2: "متحف سفالبارد",
+    dest_longyearbyen_attr_3: "ركوب زلاجات الكلاب",
+    dest_longyearbyen_attr_4: "الشفق القطبي",
+    dest_longyearbyen_attr_5: "شارع لونغيرباين الرئيسي",
+
+    dest_copenhagen_name: "كوبنهاغن", dest_copenhagen_country: "الدنمارك",
+    dest_copenhagen_tagline: "عاصمة اسكندنافية أنيقة بميناء ملون وحدائق ترفيهية",
+    dest_copenhagen_desc: "في كوبنهاغن، تجولنا على ميناء نيهافن الملون بقواربه التقليدية، والتقطنا صورة عند تمثال حورية البحر الصغيرة، وقضينا أمسية مبهجة بين ألعاب حدائق تيفولي.",
+    dest_copenhagen_attr_1: "ميناء نيهافن",
+    dest_copenhagen_attr_2: "تمثال حورية البحر الصغيرة",
+    dest_copenhagen_attr_3: "حدائق تيفولي",
+    dest_copenhagen_attr_4: "قصر كريستيانسبورغ",
+    dest_copenhagen_attr_5: "قلعة روزنبورغ",
+
+    dest_tallinn_name: "تالين", dest_tallinn_country: "إستونيا",
+    dest_tallinn_tagline: "مدينة عصور وسطى محفوظة بأسوارها وأبراجها",
+    dest_tallinn_desc: "في تالين، تجولنا بين أزقة المدينة القديمة الحجرية وأسوارها الدفاعية، ووقفنا أمام كاتدرائية الإسكندر نيفسكي المهيبة، واستمتعنا بجو ساحة البلدية القديمة.",
+    dest_tallinn_attr_1: "المدينة القديمة (توومبيا)",
+    dest_tallinn_attr_2: "كاتدرائية الإسكندر نيفسكي",
+    dest_tallinn_attr_3: "ساحة البلدية القديمة",
+    dest_tallinn_attr_4: "أسوار المدينة وأبراجها",
+    dest_tallinn_attr_5: "قصر وحديقة كادريورغ",
+
+    dest_krakow_name: "كراكوف", dest_krakow_country: "بولندا",
+    dest_krakow_tagline: "مدينة بولندية عريقة بقلعة ملكية وساحة تاريخية",
+    dest_krakow_desc: "في كراكوف، صعدنا إلى قلعة فافيل الملكية المطلة على نهر فيستولا، ووقفنا وسط الساحة الرئيسية الواسعة أمام كنيسة القديسة مريم، وتجولنا في حي كازيمييج التاريخي.",
+    dest_krakow_attr_1: "قلعة فافيل الملكية",
+    dest_krakow_attr_2: "الساحة الرئيسية (رينيك غوفني)",
+    dest_krakow_attr_3: "كنيسة القديسة مريم",
+    dest_krakow_attr_4: "حي كازيمييج",
+    dest_krakow_attr_5: "قاعة النسيج (سوق الأقمشة)",
+
+    dest_zakopane_name: "زاكوباني", dest_zakopane_country: "بولندا",
+    dest_zakopane_tagline: "بوابة جبال التاترا وعاصمة الجبال البولندية",
+    dest_zakopane_desc: "في زاكوباني، ركبنا القطار المعلق إلى قمة غوبالوفكا المطلة على جبال التاترا، ومشينا حول بحيرة مورسكي أوكو الفيروزية، وتجولنا في شارع كروبوفكي بين المحال الخشبية التقليدية.",
+    dest_zakopane_attr_1: "قمة غوبالوفكا (القطار المعلق)",
+    dest_zakopane_attr_2: "بحيرة مورسكي أوكو وجبال التاترا",
+    dest_zakopane_attr_3: "شارع كروبوفكي",
+    dest_zakopane_attr_4: "العمارة الجبلية الخشبية التقليدية",
+    dest_zakopane_attr_5: "تلفريك كاسبروفي فيرش",
+
+    dest_budapest_name: "بودابست", dest_budapest_country: "المجر",
+    dest_budapest_tagline: "عاصمة أوروبية على ضفاف الدانوب بحمامات حرارية شهيرة",
+    dest_budapest_desc: "في بودابست، أخذنا قاربًا على نهر الدانوب أمام مبنى البرلمان المضاء ليلًا، وتجولنا في قلعة بودا وقلعة الصيادين، واسترخينا في حمامات سيتشيني الحرارية الشهيرة.",
+    dest_budapest_attr_1: "مبنى البرلمان المجري",
+    dest_budapest_attr_2: "قلعة الصيادين",
+    dest_budapest_attr_3: "قلعة بودا",
+    dest_budapest_attr_4: "حمامات سيتشيني الحرارية",
+    dest_budapest_attr_5: "جسر السلاسل",
+
+    dest_dubai_name: "دبي", dest_dubai_country: "الإمارات العربية المتحدة",
+    dest_dubai_tagline: "مدينة مستقبلية شاهقة على ساحل الخليج العربي",
+    dest_dubai_desc: "في دبي، وقفنا عند قمة برج خليفة أعلى مبنى في العالم، وشاهدنا نافورة دبي الراقصة أمام أكبر مركز تسوق، وتجولنا في حي الفهيدي التاريخي على ضفاف الخور.",
+    dest_dubai_attr_1: "برج خليفة",
+    dest_dubai_attr_2: "دبي مول ونافورة دبي",
+    dest_dubai_attr_3: "مرسى دبي",
+    dest_dubai_attr_4: "نخلة جميرا",
+    dest_dubai_attr_5: "حي الفهيدي التاريخي",
+
+    dest_abudhabi_name: "أبوظبي", dest_abudhabi_country: "الإمارات العربية المتحدة",
+    dest_abudhabi_tagline: "عاصمة إماراتية تجمع بين الأصالة والفخامة الحديثة",
+    dest_abudhabi_desc: "في أبوظبي، وقفنا مبهورين داخل جامع الشيخ زايد الكبير بقبابه البيضاء، وتجولنا بين روائع متحف اللوفر أبوظبي، ومشينا على كورنيش المدينة عند غروب الشمس.",
+    dest_abudhabi_attr_1: "جامع الشيخ زايد الكبير",
+    dest_abudhabi_attr_2: "متحف اللوفر أبوظبي",
+    dest_abudhabi_attr_3: "كورنيش أبوظبي",
+    dest_abudhabi_attr_4: "قصر الوطن",
+    dest_abudhabi_attr_5: "جزيرة ياس",
+
+    /* Booking page */
+    page_booking_eyebrow: "الحجز",
+    page_booking_title: "احجز رحلتك القادمة",
+    page_booking_subtitle: "اختر من رحلاتنا السابقة أو أخبرنا بوجهة أحلامك، وسنرسل لك عرض رحلة مخصصًا خلال 2-3 أيام عمل.",
+    form_section_trip_title: "تفاصيل الرحلة",
+    form_destination_label: "الوجهة",
+    form_destination_placeholder: "اختر وجهة",
+    form_destination_other: "أخرى (حدد الوجهة)",
+    form_destination_other_label: "اسم الوجهة المطلوبة",
+    form_destination_other_placeholder: "مثال: باريس، فرنسا",
+    form_date_from_label: "تاريخ المغادرة",
+    form_date_to_label: "تاريخ العودة",
+    form_adults_label: "البالغون",
+    form_children_label: "الأطفال (2-11 سنة)",
+    form_infants_label: "الرضع (أقل من سنتين)",
+    form_section_contact_title: "بيانات التواصل",
+    form_first_name_label: "الاسم الأول",
+    form_first_name_placeholder: "مثال: أحمد",
+    form_last_name_label: "اسم العائلة",
+    form_last_name_placeholder: "مثال: العلي",
+    form_phone_label: "رقم الهاتف",
+    form_phone_placeholder: "مثال: +966 5XXXXXXXX",
+    form_whatsapp_label: "رقم الواتساب",
+    form_whatsapp_placeholder: "مثال: +966 5XXXXXXXX",
+    form_whatsapp_same: "نفس رقم الهاتف",
+    form_notes_label: "ملاحظات إضافية (اختياري)",
+    form_notes_placeholder: "أي تفاصيل تودّ إخبارنا بها عن رحلتك...",
+    form_consent_label: "أوافق على أن يتواصل معي فريق سامر ابو مخ بخصوص هذا الطلب",
+    form_offer_note: "📩 سنراجع طلبك ونرسل لك عرض رحلة مخصصًا خلال 2-3 أيام عمل.",
+    form_submit_button: "إرسال طلب الحجز",
+    form_submit_sending: "جارٍ الإرسال...",
+    form_required_note: "الحقول المميزة بـ * مطلوبة",
+    form_success_title: "تم استلام طلبك بنجاح!",
+    form_success_text: "شكرًا لك. سنراجع طلبك ونرسل لك عرض رحلة مخصصًا خلال 2-3 أيام عمل عبر الهاتف أو الواتساب.",
+    form_success_new: "إرسال طلب جديد",
+    form_error_title: "لم نتمكن من إرسال طلبك",
+    form_error_text: "حدث خطأ أثناء إرسال الطلب. حاول مرة أخرى أو تواصل معنا مباشرة عبر الواتساب.",
+    form_error_dates: "تاريخ العودة يجب أن يكون بعد تاريخ المغادرة",
+
+    booking_sidebar_title: "تفضل التواصل المباشر؟",
+    booking_sidebar_text: "يسعدنا أيضًا التحدث معك مباشرة لتخطيط رحلتك.",
+    booking_call_us: "اتصل بنا",
+    booking_whatsapp_us: "راسلنا على واتساب",
+    booking_email_us: "راسلنا بالبريد",
+    booking_steps_title: "كيف تسير عملية الحجز؟",
+    booking_step_1_title: "أرسل طلبك",
+    booking_step_1_desc: "عبّئ النموذج ببيانات رحلتك، ونستلم طلبك فورًا.",
+    booking_step_2_title: "نراجع طلبك",
+    booking_step_2_desc: "يجهز فريقنا عرض رحلة مخصصًا لك خلال 2-3 أيام عمل.",
+    booking_step_3_title: "نتواصل معك بالعرض",
+    booking_step_3_desc: "نرسل لك تفاصيل الرحلة والسعر النهائي عبر الهاتف أو الواتساب.",
+    booking_step_4_title: "استمتع برحلتك",
+    booking_step_4_desc: "نبقى بجانبك بالدعم من أول يوم حتى عودتك.",
+
+    /* Floating WhatsApp button */
+    whatsapp_float_label: "تواصل معنا عبر واتساب",
+
+    /* Homepage "call me back" contact section */
+    contact_section_eyebrow: "تواصل معنا",
+    contact_section_title: "اترك بياناتك وسنتصل بك",
+    contact_section_subtitle: "عبّئ النموذج أدناه وسنتواصل معك خلال وقت قصير، أو راسلنا مباشرة على واتساب.",
+    contact_form_name_label: "الاسم الكامل",
+    contact_form_name_placeholder: "مثال: أحمد العلي",
+    contact_form_phone_label: "رقم الهاتف",
+    contact_form_message_label: "رسالتك (اختياري)",
+    contact_form_message_placeholder: "كيف يمكننا مساعدتك؟",
+    contact_form_submit: "اطلب اتصالاً",
+    contact_form_whatsapp_cta: "أو تواصل عبر واتساب",
+    contact_form_success_title: "تم استلام طلبك!",
+    contact_form_success_text: "شكرًا لك، سنتصل بك في أقرب وقت ممكن.",
+
+    /* Destination cards / detail page */
+    view_details: "عرض التفاصيل",
+    explore_all_teaser: "شاهد كل الوجهات الـ25 التي زرناها.",
+    dest_not_found: "لم يتم العثور على هذه الوجهة.",
+    hotels_title: "فنادق أقمنا بها",
+    photo_credit_label: "الصورة:",
+    dest_detail_cta_title: "جاهزون للانطلاق؟",
+    dest_detail_cta_text: "احجز هذه الوجهة وسنرسل لك عرضًا خلال 2-3 أيام عمل.",
+
+    /* Booking: trip type + multi-destination */
+    trip_type_label: "نوع الرحلة",
+    trip_type_single: "وجهة واحدة",
+    trip_type_multi: "أكثر من وجهة",
+    stop_label: "الوجهة رقم",
+    add_stop_button: "+ أضف وجهة أخرى",
+    remove_stop_button: "إزالة",
+
+    /* Booking: honeymoon + suggestion quiz */
+    honeymoon_toggle_label: "هل هذه رحلة شهر عسل؟ 💍",
+    honeymoon_know_dest_label: "هل تعرفان الوجهة التي تريدان زيارتها؟",
+    yes_label: "نعم",
+    no_label: "لا، اقترحوا لنا",
+    honeymoon_quiz_intro: "أجيبا عن الأسئلة التالية، وسيقترح سامر لكما وجهة شهر العسل المثالية:",
+    hm_q1_title: "1. ما هو الجو الذي تفضلانه لشهر العسل؟",
+    hm_q1_opt1: "شاطئ وشمس", hm_q1_opt2: "مدينة نابضة بالحياة", hm_q1_opt3: "طبيعة وجبال", hm_q1_opt4: "تاريخ وثقافة",
+    hm_q2_title: "2. ما هي ميزانيتكما التقريبية؟",
+    hm_q2_opt1: "اقتصادية", hm_q2_opt2: "متوسطة", hm_q2_opt3: "فاخرة",
+    hm_q3_title: "3. كم مدة رحلة شهر العسل؟",
+    hm_q3_opt1: "أقل من أسبوع", hm_q3_opt2: "أسبوع إلى أسبوعين", hm_q3_opt3: "أكثر من أسبوعين",
+    hm_q4_title: "4. في أي موسم تخططان للسفر؟",
+    hm_q4_opt1: "الشتاء", hm_q4_opt2: "الربيع", hm_q4_opt3: "الصيف", hm_q4_opt4: "الخريف",
+    hm_q5_title: "5. ما مستوى النشاط الذي تفضلانه؟",
+    hm_q5_opt1: "استرخاء تام", hm_q5_opt2: "مزيج من الاسترخاء والاستكشاف", hm_q5_opt3: "مغامرة ونشاط",
+    hm_q6_title: "6. هل تفضلان الابتعاد عن صخب المدن؟",
+    hm_q6_opt1: "نعم، نفضل الهدوء", hm_q6_opt2: "لا، نحب حيوية المدن", hm_q6_opt3: "لا فرق لدينا",
+    hm_q7_title: "7. ما الذي يهمكما أكثر في الوجهة؟",
+    hm_q7_opt1: "المأكولات المحلية", hm_q7_opt2: "المناظر الطبيعية", hm_q7_opt3: "التسوق والفعاليات", hm_q7_opt4: "الخصوصية والرومانسية",
+    hm_q8_title: "8. هل هناك وجهة كانت تراودكما دائمًا؟ (اختياري)",
+    hm_q8_placeholder: "مثال: جزر المالديف، اليابان...",
+
+    /* Misc */
+    back_to_destinations: "العودة إلى الوجهات",
+  },
+
+  en: {
+    /* Header / nav */
+    skip_to_content: "Skip to content",
+    brand_name: "Samer Abu Mock",
+    nav_home: "Home",
+    nav_destinations: "Destinations",
+    nav_booking: "Book a Trip",
+    nav_contact: "Contact",
+    nav_cta: "Book Now",
+
+    /* Hero */
+    hero_eyebrow: "A travel agency with real experience",
+    hero_title: "We plan your trip from places we've visited ourselves",
+    hero_subtitle: "We don't sell you a destination from a catalog. Every place you see here, we've actually visited and experienced first-hand — so you get a realistic, dependable itinerary from day one to your return.",
+    hero_cta_primary: "Explore Destinations",
+    hero_cta_secondary: "Book Your Trip",
+    hero_photo_alt: "Samer Abu Mock on one of his trips",
+    hero_photo_role: "Founder & Trip Organizer",
+    hero_photo_placeholder_text: "Add Samer's photo here: assets/img/samer-hero.jpg",
+    stat_destinations_number: "25+",
+    stat_destinations_label: "Destinations visited ourselves",
+    stat_years_number: "1",
+    stat_years_label: "Year organizing trips",
+    stat_travelers_number: "30+",
+    stat_travelers_label: "Travelers who trusted us",
+
+    /* About */
+    about_eyebrow: "Our story",
+    about_title: "Why Samer Abu Mock?",
+    about_text: "Before we recommend any destination, we've already been there ourselves: walked its streets, tried its food, and explored its landmarks up close. That means every piece of advice we give you is based on real experience, not photos from the internet.",
+    about_point_1_title: "We visit it ourselves first",
+    about_point_1_desc: "Every destination we offer, we've personally been to before adding it to our programs.",
+    about_point_2_title: "A plan built just for you",
+    about_point_2_desc: "Your travel dates, trip length and preferences shape the entire itinerary.",
+    about_point_3_title: "Support throughout your trip",
+    about_point_3_desc: "We stay reachable by phone and WhatsApp from booking until you're back home.",
+    about_quote: "\"Travel is an experience, and we make sure to live it first before we share it with you.\"",
+    about_quote_name: "Samer Abu Mock",
+    about_quote_role: "Trip Organizer",
+
+    /* Featured destinations (home) */
+    section_destinations_eyebrow: "Our past trips",
+    section_destinations_title: "Destinations We've Visited",
+    section_destinations_subtitle: "Get to know the cities we've visited and explored ourselves, ahead of planning your next trip.",
+    view_all_destinations: "View All Destinations",
+    card_learn_more: "Learn More",
+
+    /* Why choose us */
+    why_eyebrow: "Why us",
+    why_title: "Why travelers choose us",
+    why_1_title: "Real experience",
+    why_1_desc: "Our recommendations are based on actual visits, not copied information.",
+    why_2_title: "Fully personal planning",
+    why_2_desc: "We design your trip around your dates, budget and travel companions.",
+    why_3_title: "Clear, transparent pricing",
+    why_3_desc: "No hidden fees — you know your trip's full cost from the start.",
+    why_4_title: "Ongoing support while traveling",
+    why_4_desc: "Our team stays reachable on WhatsApp throughout your trip.",
+
+    /* CTA banner */
+    cta_banner_title: "Ready for your next trip?",
+    cta_banner_sub: "Tell us the destination and dates that suit you, and we'll handle the rest.",
+    cta_banner_button: "Start Booking Now",
+
+    /* Footer */
+    footer_about_text: "A travel agency that organizes your trips with real experience. Every destination we recommend, we've visited ourselves first.",
+    footer_links_title: "Quick Links",
+    footer_destinations_title: "Our Destinations",
+    footer_contact_title: "Get in Touch",
+    footer_phone_value: "+972 54-744-8028",
+    footer_email_value: "info@samertours.example",
+    footer_address_value: "Germany",
+    footer_rights: "All rights reserved.",
+    footer_credit: "Website design & development by",
+
+    /* Destinations page */
+    page_destinations_eyebrow: "Destinations",
+    page_destinations_title: "Destinations We've Visited",
+    page_destinations_subtitle: "Every destination below, we've visited ourselves and explored its top attractions. Tap \"Details\" to see more, or \"Book This Destination\" to get started right away.",
+    attractions_title: "Top Places We Visited",
+    book_this_destination: "Book This Destination",
+    dest_details_toggle: "Details & places we visited",
+    other_dest_title: "Don't see your favorite destination?",
+    other_dest_text: "You can request any other destination in the world, and we'll plan it with the same care.",
+    other_dest_cta: "Request Your Destination",
+
+    /* Regions */
+    region_southern_europe_name: "Southern Europe",
+    region_france_benelux_name: "France & the Benelux",
+    region_germany_austria_name: "Germany & Austria",
+    region_uk_name: "United Kingdom",
+    region_scandinavia_arctic_name: "Scandinavia & the Arctic",
+    region_eastern_europe_baltics_name: "Eastern Europe & the Baltics",
+    region_middle_east_name: "Middle East",
+
+    /* Destination content */
+    dest_madrid_name: "Madrid", dest_madrid_country: "Spain",
+    dest_madrid_tagline: "A capital pulsing with art and nightlife",
+    dest_madrid_desc: "We spent a full week wandering Madrid's historic museums, savoring tapas in its side streets, and soaking up nights that never sleep. Madrid is a captivating mix of royal heritage and modern energy.",
+    dest_madrid_attr_1: "Puerta del Sol",
+    dest_madrid_attr_2: "Royal Palace",
+    dest_madrid_attr_3: "Museo del Prado",
+    dest_madrid_attr_4: "Retiro Park",
+    dest_madrid_attr_5: "Gran Vía",
+
+    dest_valencia_name: "Valencia", dest_valencia_country: "Spain",
+    dest_valencia_tagline: "Sunshine, beaches, and futuristic architecture",
+    dest_valencia_desc: "Valencia surprised us with its unique blend of old town charm and futuristic design. We strolled along Malvarrosa Beach, tasted authentic paella at a small local restaurant, and spent a quiet evening among the City of Arts and Sciences.",
+    dest_valencia_attr_1: "City of Arts and Sciences",
+    dest_valencia_attr_2: "La Lonja de la Seda",
+    dest_valencia_attr_3: "Malvarrosa Beach",
+    dest_valencia_attr_4: "Central Market",
+    dest_valencia_attr_5: "El Carmen District",
+
+    dest_milano_name: "Milan", dest_milano_country: "Italy",
+    dest_milano_tagline: "Italian elegance between history and fashion",
+    dest_milano_desc: "In Milan, we stood in awe of the marble details of the Duomo, shopped among world fashion houses in the Galleria Vittorio Emanuele II, and ended our day with a quiet evening along the Navigli canals.",
+    dest_milano_attr_1: "Milan Cathedral (Duomo)",
+    dest_milano_attr_2: "Galleria Vittorio Emanuele II",
+    dest_milano_attr_3: "Sforza Castle",
+    dest_milano_attr_4: "Teatro alla Scala",
+    dest_milano_attr_5: "The Navigli District",
+
+    dest_amsterdam_name: "Amsterdam", dest_amsterdam_country: "Netherlands",
+    dest_amsterdam_tagline: "Waterways and rich history on every corner",
+    dest_amsterdam_desc: "We rented bikes and cycled around Amsterdam's famous canals, visited the moving Anne Frank House, and ended our day with a peaceful walk through Vondelpark among the locals.",
+    dest_amsterdam_attr_1: "Rijksmuseum",
+    dest_amsterdam_attr_2: "Anne Frank House",
+    dest_amsterdam_attr_3: "Vondelpark",
+    dest_amsterdam_attr_4: "Canal Ring",
+    dest_amsterdam_attr_5: "Jordaan District",
+
+    dest_oslo_name: "Oslo", dest_oslo_country: "Norway",
+    dest_oslo_tagline: "Calm Scandinavian nature and contemporary art",
+    dest_oslo_desc: "In Oslo, we wandered among the unique sculptures of Vigeland Park, stood before the bold architecture of the fjord-facing Opera House, and discovered Viking history at their dedicated museum.",
+    dest_oslo_attr_1: "Vigeland Park",
+    dest_oslo_attr_2: "Oslo Opera House",
+    dest_oslo_attr_3: "Viking Ship Museum",
+    dest_oslo_attr_4: "Akershus Fortress",
+    dest_oslo_attr_5: "Karl Johans Gate",
+
+    dest_madeira_name: "Madeira", dest_madeira_country: "Portugal",
+    dest_madeira_tagline: "An Atlantic island between green mountains and ocean",
+    dest_madeira_desc: "In Madeira, we walked the green levada trails along the mountains, rode the cable car overlooking Funchal, and tasted authentic Madeira wine at a local winery.",
+    dest_madeira_attr_1: "The Levada Walking Trails",
+    dest_madeira_attr_2: "Cabo Girão Skywalk",
+    dest_madeira_attr_3: "Funchal Old Town",
+    dest_madeira_attr_4: "Monte Palace Tropical Garden",
+    dest_madeira_attr_5: "Pico do Arieiro Peak",
+
+    dest_metz_name: "Metz", dest_metz_country: "France",
+    dest_metz_tagline: "A quiet French city with Gothic architecture and stunning stained glass",
+    dest_metz_desc: "In Metz, we lingered before the colorful stained-glass windows of Saint-Étienne Cathedral, explored the modern Centre Pompidou-Metz, and spent a quiet evening along the Moselle riverbanks.",
+    dest_metz_attr_1: "Saint-Étienne Cathedral",
+    dest_metz_attr_2: "Centre Pompidou-Metz",
+    dest_metz_attr_3: "Place Saint-Louis",
+    dest_metz_attr_4: "La Cour d'Or Museum",
+    dest_metz_attr_5: "The Moselle Riverbanks",
+
+    dest_brussels_name: "Brussels", dest_brussels_country: "Belgium",
+    dest_brussels_tagline: "A European capital with distinct history and architecture",
+    dest_brussels_desc: "In Brussels, we stood in awe in the stunning Grand Place, went up into the famous Atomium spheres, and wandered the old alleys around the historic center.",
+    dest_brussels_attr_1: "Grand Place",
+    dest_brussels_attr_2: "The Atomium",
+    dest_brussels_attr_3: "Manneken Pis",
+    dest_brussels_attr_4: "Royal Palace",
+    dest_brussels_attr_5: "Mont des Arts",
+
+    dest_luxembourg_name: "Luxembourg", dest_luxembourg_country: "Luxembourg",
+    dest_luxembourg_tagline: "A small city of fortresses and castles above green valleys",
+    dest_luxembourg_desc: "In Luxembourg, we wandered through the historic Bock Casemates, stood on Adolphe Bridge overlooking the valley, and descended into the charming Grund district beneath the old town.",
+    dest_luxembourg_attr_1: "The Bock Casemates",
+    dest_luxembourg_attr_2: "Adolphe Bridge",
+    dest_luxembourg_attr_3: "The Grund District",
+    dest_luxembourg_attr_4: "Notre-Dame Cathedral",
+    dest_luxembourg_attr_5: "Chemin de la Corniche",
+
+    dest_dortmund_name: "Dortmund", dest_dortmund_country: "Germany",
+    dest_dortmund_tagline: "A German city pulsing with sport and modern industry",
+    dest_dortmund_desc: "In Dortmund, we visited the legendary Signal Iduna Park stadium, climbed the Florian Tower overlooking the city, and discovered how old factory towers became cultural spaces at the U-Tower.",
+    dest_dortmund_attr_1: "Signal Iduna Park Stadium",
+    dest_dortmund_attr_2: "Florian Tower, Westfalenpark",
+    dest_dortmund_attr_3: "The Dortmund U-Tower",
+    dest_dortmund_attr_4: "Reinoldikirche Church",
+    dest_dortmund_attr_5: "Alter Markt (Old Market Square)",
+
+    dest_munich_name: "Munich", dest_munich_country: "Germany",
+    dest_munich_tagline: "Bavaria's capital between old traditions and green gardens",
+    dest_munich_desc: "In Munich, we watched the glockenspiel show in Marienplatz, strolled through the vast English Garden, and browsed the stalls of the traditional Viktualienmarkt.",
+    dest_munich_attr_1: "Marienplatz & the Neues Rathaus",
+    dest_munich_attr_2: "Frauenkirche",
+    dest_munich_attr_3: "The English Garden",
+    dest_munich_attr_4: "Nymphenburg Palace",
+    dest_munich_attr_5: "Viktualienmarkt",
+
+    dest_hallstatt_name: "Hallstatt", dest_hallstatt_country: "Austria",
+    dest_hallstatt_tagline: "A charming mountain village on the shore of a pristine lake",
+    dest_hallstatt_desc: "In Hallstatt, we took a boat across the crystal-clear lake surrounded by mountains, went up to the Skywalk viewpoint, and visited the salt mine that made this village famous centuries ago.",
+    dest_hallstatt_attr_1: "Lake Hallstatt",
+    dest_hallstatt_attr_2: "The Skywalk Viewpoint",
+    dest_hallstatt_attr_3: "The Salt Mine (Salzwelten)",
+    dest_hallstatt_attr_4: "The Market Square",
+    dest_hallstatt_attr_5: "The Hallstatt Charnel House",
+
+    dest_vienna_name: "Vienna", dest_vienna_country: "Austria",
+    dest_vienna_tagline: "The capital of classical music and imperial palaces",
+    dest_vienna_desc: "In Vienna, we wandered the vast gardens of Schönbrunn Palace, stood before the famous St. Stephen's Cathedral, and attended an evening concert at the Vienna State Opera.",
+    dest_vienna_attr_1: "Schönbrunn Palace",
+    dest_vienna_attr_2: "St. Stephen's Cathedral",
+    dest_vienna_attr_3: "Belvedere Palace",
+    dest_vienna_attr_4: "Vienna State Opera",
+    dest_vienna_attr_5: "Naschmarkt",
+
+    dest_innsbruck_name: "Innsbruck", dest_innsbruck_country: "Austria",
+    dest_innsbruck_tagline: "A mountain city surrounded by Alpine peaks on every side",
+    dest_innsbruck_desc: "In Innsbruck, we stood before the famous Golden Roof in the old town, rode the cable car up to the snow-capped Nordkette peaks, and visited the dazzling Swarovski Crystal Worlds.",
+    dest_innsbruck_attr_1: "The Golden Roof (Goldenes Dachl)",
+    dest_innsbruck_attr_2: "Nordkette Cable Car & Mountains",
+    dest_innsbruck_attr_3: "Swarovski Crystal Worlds",
+    dest_innsbruck_attr_4: "Ambras Castle",
+    dest_innsbruck_attr_5: "The Old Town (Altstadt)",
+
+    dest_edinburgh_name: "Edinburgh", dest_edinburgh_country: "Scotland, United Kingdom",
+    dest_edinburgh_tagline: "A Scottish capital with a historic castle atop a rocky hill",
+    dest_edinburgh_desc: "In Edinburgh, we climbed the rocky hill to the historic Edinburgh Castle, walked the length of the Royal Mile, and hiked up Arthur's Seat for a panoramic view of the city.",
+    dest_edinburgh_attr_1: "Edinburgh Castle",
+    dest_edinburgh_attr_2: "The Royal Mile",
+    dest_edinburgh_attr_3: "Arthur's Seat",
+    dest_edinburgh_attr_4: "Palace of Holyroodhouse",
+    dest_edinburgh_attr_5: "The Old Town",
+
+    dest_wales_name: "Wales", dest_wales_country: "United Kingdom",
+    dest_wales_tagline: "Stunning mountain nature and medieval castles",
+    dest_wales_desc: "In Wales, we wandered the green peaks of Snowdonia, visited Conwy Castle overlooking the coast, and discovered the uniquely colorful village of Portmeirion.",
+    dest_wales_attr_1: "Snowdonia National Park",
+    dest_wales_attr_2: "Conwy Castle",
+    dest_wales_attr_3: "Cardiff Castle",
+    dest_wales_attr_4: "The Pembrokeshire Coast",
+    dest_wales_attr_5: "Portmeirion Village",
+
+    dest_bath_name: "Bath", dest_bath_country: "England, United Kingdom",
+    dest_bath_tagline: "A historic English city with Roman baths and Georgian architecture",
+    dest_bath_desc: "In Bath, we visited the ancient Roman Baths that still feel alive today, stood before the elegant Royal Crescent facade, and crossed the unique shop-lined Pulteney Bridge.",
+    dest_bath_attr_1: "The Roman Baths",
+    dest_bath_attr_2: "Bath Abbey",
+    dest_bath_attr_3: "The Royal Crescent",
+    dest_bath_attr_4: "Pulteney Bridge",
+    dest_bath_attr_5: "The Circus",
+
+    dest_longyearbyen_name: "Longyearbyen", dest_longyearbyen_country: "Svalbard, Norway",
+    dest_longyearbyen_tagline: "The northernmost inhabited town, where ice meets the sky",
+    dest_longyearbyen_desc: "In Longyearbyen, we saw the vast icebergs and fjords of the polar Svalbard archipelago, tried dog sledding across the snow, and learned the region's unique history at the Svalbard Museum.",
+    dest_longyearbyen_attr_1: "Glacier & Fjord Boat Tours",
+    dest_longyearbyen_attr_2: "The Svalbard Museum",
+    dest_longyearbyen_attr_3: "Dog Sledding",
+    dest_longyearbyen_attr_4: "The Northern Lights",
+    dest_longyearbyen_attr_5: "Longyearbyen's Main Street",
+
+    dest_copenhagen_name: "Copenhagen", dest_copenhagen_country: "Denmark",
+    dest_copenhagen_tagline: "An elegant Scandinavian capital with a colorful harbor and amusement gardens",
+    dest_copenhagen_desc: "In Copenhagen, we strolled along the colorful Nyhavn harbor with its traditional boats, took a photo by the Little Mermaid statue, and spent a delightful evening among the rides of Tivoli Gardens.",
+    dest_copenhagen_attr_1: "Nyhavn Harbor",
+    dest_copenhagen_attr_2: "The Little Mermaid",
+    dest_copenhagen_attr_3: "Tivoli Gardens",
+    dest_copenhagen_attr_4: "Christiansborg Palace",
+    dest_copenhagen_attr_5: "Rosenborg Castle",
+
+    dest_tallinn_name: "Tallinn", dest_tallinn_country: "Estonia",
+    dest_tallinn_tagline: "A perfectly preserved medieval city of walls and towers",
+    dest_tallinn_desc: "In Tallinn, we wandered the cobbled alleys of the old town within its defensive walls, stood before the imposing Alexander Nevsky Cathedral, and soaked up the atmosphere of the Old Town Hall Square.",
+    dest_tallinn_attr_1: "The Old Town (Toompea)",
+    dest_tallinn_attr_2: "Alexander Nevsky Cathedral",
+    dest_tallinn_attr_3: "Town Hall Square",
+    dest_tallinn_attr_4: "The City Walls & Towers",
+    dest_tallinn_attr_5: "Kadriorg Palace & Park",
+
+    dest_krakow_name: "Kraków", dest_krakow_country: "Poland",
+    dest_krakow_tagline: "A historic Polish city with a royal castle and grand square",
+    dest_krakow_desc: "In Kraków, we climbed to the royal Wawel Castle overlooking the Vistula River, stood in the vast Main Market Square before St. Mary's Basilica, and wandered the historic Kazimierz district.",
+    dest_krakow_attr_1: "Wawel Royal Castle",
+    dest_krakow_attr_2: "Main Market Square (Rynek Główny)",
+    dest_krakow_attr_3: "St. Mary's Basilica",
+    dest_krakow_attr_4: "The Kazimierz District",
+    dest_krakow_attr_5: "The Cloth Hall",
+
+    dest_zakopane_name: "Zakopane", dest_zakopane_country: "Poland",
+    dest_zakopane_tagline: "The gateway to the Tatra Mountains, Poland's mountain capital",
+    dest_zakopane_desc: "In Zakopane, we rode the funicular up Gubałówka overlooking the Tatra Mountains, walked around the turquoise Morskie Oko lake, and browsed traditional wooden shops along Krupówki Street.",
+    dest_zakopane_attr_1: "Gubałówka Funicular",
+    dest_zakopane_attr_2: "Morskie Oko Lake & the Tatra Mountains",
+    dest_zakopane_attr_3: "Krupówki Street",
+    dest_zakopane_attr_4: "Traditional Highlander Wooden Architecture",
+    dest_zakopane_attr_5: "Kasprowy Wierch Cable Car",
+
+    dest_budapest_name: "Budapest", dest_budapest_country: "Hungary",
+    dest_budapest_tagline: "A European capital on the Danube, famous for its thermal baths",
+    dest_budapest_desc: "In Budapest, we took a boat on the Danube in front of the beautifully lit Parliament Building, explored Buda Castle and the Fisherman's Bastion, and relaxed in the famous Széchenyi Thermal Baths.",
+    dest_budapest_attr_1: "Hungarian Parliament Building",
+    dest_budapest_attr_2: "Fisherman's Bastion",
+    dest_budapest_attr_3: "Buda Castle",
+    dest_budapest_attr_4: "Széchenyi Thermal Bath",
+    dest_budapest_attr_5: "The Chain Bridge",
+
+    dest_dubai_name: "Dubai", dest_dubai_country: "United Arab Emirates",
+    dest_dubai_tagline: "A futuristic, soaring city on the Arabian Gulf coast",
+    dest_dubai_desc: "In Dubai, we stood at the top of the Burj Khalifa, the world's tallest building, watched the Dubai Fountain dance in front of the massive mall, and explored the historic Al Fahidi district along the creek.",
+    dest_dubai_attr_1: "Burj Khalifa",
+    dest_dubai_attr_2: "The Dubai Mall & Fountain",
+    dest_dubai_attr_3: "Dubai Marina",
+    dest_dubai_attr_4: "Palm Jumeirah",
+    dest_dubai_attr_5: "Al Fahidi Historic District",
+
+    dest_abudhabi_name: "Abu Dhabi", dest_abudhabi_country: "United Arab Emirates",
+    dest_abudhabi_tagline: "An Emirati capital blending heritage with modern grandeur",
+    dest_abudhabi_desc: "In Abu Dhabi, we stood in awe inside the white-domed Sheikh Zayed Grand Mosque, wandered among the masterpieces of the Louvre Abu Dhabi, and walked the city's Corniche at sunset.",
+    dest_abudhabi_attr_1: "Sheikh Zayed Grand Mosque",
+    dest_abudhabi_attr_2: "Louvre Abu Dhabi",
+    dest_abudhabi_attr_3: "The Abu Dhabi Corniche",
+    dest_abudhabi_attr_4: "Qasr Al Watan",
+    dest_abudhabi_attr_5: "Yas Island",
+
+    /* Booking page */
+    page_booking_eyebrow: "Booking",
+    page_booking_title: "Book Your Next Trip",
+    page_booking_subtitle: "Choose from our past trips or tell us your dream destination, and we'll send you a tailored offer within 2-3 business days.",
+    form_section_trip_title: "Trip Details",
+    form_destination_label: "Destination",
+    form_destination_placeholder: "Select a destination",
+    form_destination_other: "Other (please specify)",
+    form_destination_other_label: "Requested destination name",
+    form_destination_other_placeholder: "e.g. Paris, France",
+    form_date_from_label: "Departure Date",
+    form_date_to_label: "Return Date",
+    form_adults_label: "Adults",
+    form_children_label: "Children (2–11 yrs)",
+    form_infants_label: "Infants (under 2)",
+    form_section_contact_title: "Contact Details",
+    form_first_name_label: "First Name",
+    form_first_name_placeholder: "e.g. Ahmed",
+    form_last_name_label: "Surname",
+    form_last_name_placeholder: "e.g. Ali",
+    form_phone_label: "Phone Number",
+    form_phone_placeholder: "e.g. +1 555 000 0000",
+    form_whatsapp_label: "WhatsApp Number",
+    form_whatsapp_placeholder: "e.g. +1 555 000 0000",
+    form_whatsapp_same: "Same as phone number",
+    form_notes_label: "Additional Notes (optional)",
+    form_notes_placeholder: "Any details you'd like to share about your trip...",
+    form_consent_label: "I agree to be contacted by the Samer Abu Mock team about this request",
+    form_offer_note: "📩 We'll review your request and send you a personalized trip offer within 2-3 business days.",
+    form_submit_button: "Send Booking Request",
+    form_submit_sending: "Sending...",
+    form_required_note: "Fields marked * are required",
+    form_success_title: "Your request has been received!",
+    form_success_text: "Thank you. We'll review your request and send you a personalized trip offer within 2-3 business days by phone or WhatsApp.",
+    form_success_new: "Send Another Request",
+    form_error_title: "We couldn't send your request",
+    form_error_text: "Something went wrong while sending your request. Please try again or contact us directly on WhatsApp.",
+    form_error_dates: "Return date must be after the departure date",
+
+    booking_sidebar_title: "Prefer to reach us directly?",
+    booking_sidebar_text: "We're also happy to talk with you directly to plan your trip.",
+    booking_call_us: "Call Us",
+    booking_whatsapp_us: "Message Us on WhatsApp",
+    booking_email_us: "Email Us",
+    booking_steps_title: "How booking works",
+    booking_step_1_title: "Send your request",
+    booking_step_1_desc: "Fill in your trip details — we receive it instantly.",
+    booking_step_2_title: "We review your request",
+    booking_step_2_desc: "Our team prepares a personalized trip offer for you within 2-3 business days.",
+    booking_step_3_title: "We reach out with your offer",
+    booking_step_3_desc: "We share the trip details and final price with you by phone or WhatsApp.",
+    booking_step_4_title: "Enjoy your trip",
+    booking_step_4_desc: "We stay by your side with support until you're back.",
+
+    /* Floating WhatsApp button */
+    whatsapp_float_label: "Chat with us on WhatsApp",
+
+    /* Homepage "call me back" contact section */
+    contact_section_eyebrow: "Get in Touch",
+    contact_section_title: "Leave Your Details and We'll Call You",
+    contact_section_subtitle: "Fill in the form below and we'll reach out shortly, or message us directly on WhatsApp.",
+    contact_form_name_label: "Full Name",
+    contact_form_name_placeholder: "e.g. Ahmed Ali",
+    contact_form_phone_label: "Phone Number",
+    contact_form_message_label: "Your Message (optional)",
+    contact_form_message_placeholder: "How can we help you?",
+    contact_form_submit: "Request a Callback",
+    contact_form_whatsapp_cta: "Or reach us on WhatsApp",
+    contact_form_success_title: "Request received!",
+    contact_form_success_text: "Thank you, we'll call you as soon as possible.",
+
+    /* Destination cards / detail page */
+    view_details: "View Details",
+    explore_all_teaser: "See all 25 destinations we've visited.",
+    dest_not_found: "This destination could not be found.",
+    hotels_title: "Hotels We've Stayed At",
+    photo_credit_label: "Photo:",
+    dest_detail_cta_title: "Ready to go?",
+    dest_detail_cta_text: "Book this destination and we'll send you an offer within 2-3 business days.",
+
+    /* Booking: trip type + multi-destination */
+    trip_type_label: "Trip Type",
+    trip_type_single: "Single Destination",
+    trip_type_multi: "Multiple Destinations",
+    stop_label: "Destination",
+    add_stop_button: "+ Add Another Destination",
+    remove_stop_button: "Remove",
+
+    /* Booking: honeymoon + suggestion quiz */
+    honeymoon_toggle_label: "Is this a honeymoon trip? 💍",
+    honeymoon_know_dest_label: "Do you already know your destination?",
+    yes_label: "Yes",
+    no_label: "No, suggest one for us",
+    honeymoon_quiz_intro: "Answer the questions below, and Samer will suggest the perfect honeymoon destination for you:",
+    hm_q1_title: "1. What atmosphere do you prefer for your honeymoon?",
+    hm_q1_opt1: "Beach & sun", hm_q1_opt2: "A vibrant city", hm_q1_opt3: "Nature & mountains", hm_q1_opt4: "History & culture",
+    hm_q2_title: "2. What's your approximate budget?",
+    hm_q2_opt1: "Budget", hm_q2_opt2: "Mid-range", hm_q2_opt3: "Luxury",
+    hm_q3_title: "3. How long will the honeymoon be?",
+    hm_q3_opt1: "Under a week", hm_q3_opt2: "1-2 weeks", hm_q3_opt3: "More than 2 weeks",
+    hm_q4_title: "4. What season are you planning to travel in?",
+    hm_q4_opt1: "Winter", hm_q4_opt2: "Spring", hm_q4_opt3: "Summer", hm_q4_opt4: "Autumn",
+    hm_q5_title: "5. What activity level do you prefer?",
+    hm_q5_opt1: "Full relaxation", hm_q5_opt2: "A mix of relaxing & exploring", hm_q5_opt3: "Adventure & activity",
+    hm_q6_title: "6. Do you prefer to be away from city noise?",
+    hm_q6_opt1: "Yes, somewhere quiet", hm_q6_opt2: "No, we love city buzz", hm_q6_opt3: "No preference",
+    hm_q7_title: "7. What matters most to you in a destination?",
+    hm_q7_opt1: "Local food", hm_q7_opt2: "Scenery", hm_q7_opt3: "Shopping & events", hm_q7_opt4: "Privacy & romance",
+    hm_q8_title: "8. Is there a destination you've always dreamed of? (optional)",
+    hm_q8_placeholder: "e.g. Maldives, Japan...",
+
+    /* Misc */
+    back_to_destinations: "Back to Destinations",
+  }
+};
+
+(function () {
+  var STORAGE_KEY = "samerToursLang";
+  var DEFAULT_LANG = "ar";
+
+  function getDict(lang) {
+    return window.SITE_I18N[lang] || window.SITE_I18N[DEFAULT_LANG];
+  }
+
+  function applyLanguage(lang) {
+    if (!window.SITE_I18N[lang]) lang = DEFAULT_LANG;
+    var dict = getDict(lang);
+
+    document.documentElement.setAttribute("lang", lang);
+    document.documentElement.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
+
+    document.querySelectorAll("[data-i18n]").forEach(function (el) {
+      var key = el.getAttribute("data-i18n");
+      if (dict[key] !== undefined) el.textContent = dict[key];
+    });
+
+    var attrBindings = [
+      ["data-i18n-placeholder", "placeholder"],
+      ["data-i18n-alt", "alt"],
+      ["data-i18n-aria-label", "aria-label"],
+    ];
+    attrBindings.forEach(function (pair) {
+      document.querySelectorAll("[" + pair[0] + "]").forEach(function (el) {
+        var key = el.getAttribute(pair[0]);
+        if (dict[key] !== undefined) el.setAttribute(pair[1], dict[key]);
+      });
+    });
+
+    document.querySelectorAll("[data-i18n-title]").forEach(function (el) {
+      var key = el.getAttribute("data-i18n-title");
+      if (dict[key] !== undefined) document.title = dict[key];
+    });
+
+    document.querySelectorAll(".lang-btn").forEach(function (btn) {
+      btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
+    });
+
+    try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+  }
+
+  function initLanguage() {
+    var stored = null;
+    try { stored = localStorage.getItem(STORAGE_KEY); } catch (e) {}
+    applyLanguage(stored || DEFAULT_LANG);
+
+    document.querySelectorAll(".lang-btn").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        applyLanguage(btn.getAttribute("data-lang"));
+      });
+    });
+  }
+
+  window.SamerI18N = { applyLanguage: applyLanguage, initLanguage: initLanguage, getDict: getDict };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initLanguage);
+  } else {
+    initLanguage();
+  }
+})();
