@@ -23,6 +23,7 @@ window.SITE_I18N = {
     hero_subtitle: "لا نبيعك وجهة من كتالوج. كل مكان تراه هنا زرناه فعلًا، وعشنا تفاصيله، لنقدّم لك خطة سفر واقعية ومضمونة من أول يوم حتى العودة.",
     hero_cta_primary: "استكشف الوجهات",
     hero_cta_secondary: "احجز رحلتك الآن",
+    hero_motto: "نعيش الرحلة أولًا، لنرويها لك بصدق",
     hero_photo_alt: "سامر ابو مخ في إحدى رحلاته",
     hero_photo_role: "مؤسس ومنظّم رحلات",
     hero_photo_placeholder_text: "أضف صورة سامر هنا: assets/img/samer-hero.jpg",
@@ -70,6 +71,30 @@ window.SITE_I18N = {
     cta_banner_title: "جاهز لرحلتك القادمة؟",
     cta_banner_sub: "أخبرنا بالوجهة والتواريخ التي تناسبك، وسنتولى الباقي.",
     cta_banner_button: "ابدأ الحجز الآن",
+
+    /* Quick-action strip (homepage, under hero) */
+    qa_destinations: "استكشف وجهاتنا",
+    qa_booking: "احجز رحلتك",
+    qa_honeymoon: "رحلة شهر العسل",
+    qa_multi: "رحلة لأكثر من وجهة",
+    qa_whatsapp: "تواصل واتساب فوري",
+
+    /* FAQ */
+    faq_eyebrow: "أسئلة شائعة",
+    faq_title: "كل ما تود معرفته قبل الحجز",
+    faq_subtitle: "إذا كان لديك سؤال آخر، راسلنا مباشرة على واتساب وسنجيبك بسرعة.",
+    faq_q1: "كيف أحجز رحلتي؟",
+    faq_a1: "عبّئ نموذج الحجز ببيانات رحلتك (الوجهة والتواريخ وبيانات التواصل)، ونستلم طلبك فور إرساله.",
+    faq_q2: "خلال كم سنتواصل معك بعد إرسال الطلب؟",
+    faq_a2: "خلال 2-3 أيام عمل، نرسل لك عرض رحلة مخصصًا عبر الهاتف أو الواتساب.",
+    faq_q3: "هل يمكن تخصيص برنامج الرحلة حسب رغبتي؟",
+    faq_a3: "بالكامل. نبني البرنامج حول تواريخك وميزانيتك وعدد المسافرين معك، وليس من كتالوج جاهز.",
+    faq_q4: "لا نعرف وجهة شهر العسل بعد، ماذا نفعل؟",
+    faq_a4: "اختر «لا، اقترحوا لنا» في نموذج الحجز، وأجب عن بضعة أسئلة بسيطة، وسنقترح لكما وجهة مناسبة.",
+    faq_q5: "هل يمكن زيارة أكثر من وجهة في رحلة واحدة؟",
+    faq_a5: "نعم، اختر «أكثر من وجهة» في نموذج الحجز وحدد تواريخك لكل محطة.",
+    faq_q6: "هل يمكنني التواصل معك مباشرة بدل تعبئة النموذج؟",
+    faq_a6: "بالتأكيد، يمكنك مراسلتنا على واتساب في أي وقت عبر زر الواتساب في أسفل الصفحة.",
 
     /* Footer */
     footer_about_text: "وكالة سفر تنظّم رحلاتك بخبرة حقيقية. كل وجهة نرشّحها لك، زرناها بأنفسنا أولًا.",
@@ -484,6 +509,7 @@ window.SITE_I18N = {
     hero_subtitle: "We don't sell you a destination from a catalog. Every place you see here, we've actually visited and experienced first-hand — so you get a realistic, dependable itinerary from day one to your return.",
     hero_cta_primary: "Explore Destinations",
     hero_cta_secondary: "Book Your Trip",
+    hero_motto: "We live the journey first, so we can tell it to you honestly",
     hero_photo_alt: "Samer Abu Mock on one of his trips",
     hero_photo_role: "Founder & Trip Organizer",
     hero_photo_placeholder_text: "Add Samer's photo here: assets/img/samer-hero.jpg",
@@ -531,6 +557,30 @@ window.SITE_I18N = {
     cta_banner_title: "Ready for your next trip?",
     cta_banner_sub: "Tell us the destination and dates that suit you, and we'll handle the rest.",
     cta_banner_button: "Start Booking Now",
+
+    /* Quick-action strip (homepage, under hero) */
+    qa_destinations: "Explore Our Destinations",
+    qa_booking: "Book Your Trip",
+    qa_honeymoon: "Honeymoon Trip",
+    qa_multi: "Multi-Destination Trip",
+    qa_whatsapp: "Instant WhatsApp Chat",
+
+    /* FAQ */
+    faq_eyebrow: "FAQ",
+    faq_title: "Everything You'd Want to Know Before Booking",
+    faq_subtitle: "Have another question? Message us directly on WhatsApp and we'll get back to you quickly.",
+    faq_q1: "How do I book my trip?",
+    faq_a1: "Fill in the booking form with your trip details (destination, dates, and contact info) — we receive your request the moment you send it.",
+    faq_q2: "How long until you get back to me after I send a request?",
+    faq_a2: "Within 2-3 business days, we'll send you a personalized trip offer by phone or WhatsApp.",
+    faq_q3: "Can the itinerary be customized to what I want?",
+    faq_a3: "Completely. We build the program around your dates, budget, and the number of travelers — not from a ready-made catalog.",
+    faq_q4: "We don't know our honeymoon destination yet — what do we do?",
+    faq_a4: "Choose \"No, suggest one for us\" on the booking form, answer a few simple questions, and we'll suggest a destination that fits you.",
+    faq_q5: "Can I visit more than one destination on a single trip?",
+    faq_a5: "Yes — choose \"Multiple Destinations\" on the booking form and set your dates for each stop.",
+    faq_q6: "Can I reach you directly instead of filling out the form?",
+    faq_a6: "Of course — message us on WhatsApp any time using the WhatsApp button at the bottom of the page.",
 
     /* Footer */
     footer_about_text: "A travel agency that organizes your trips with real experience. Every destination we recommend, we've visited ourselves first.",

@@ -235,6 +235,17 @@ var FORM_ENDPOINT = window.SAMER_FORM_ENDPOINT;
       hmKnowNo.addEventListener("change", syncHoneymoonQuiz);
     }
 
+    /* --- Pre-fill from the homepage quick-action tiles: ?multi=1 / ?honeymoon=1 --- */
+    if (params.get("multi") === "1" && tripTypeMulti) {
+      tripTypeMulti.checked = true;
+      tripTypeMulti.dispatchEvent(new Event("change", { bubbles: true }));
+    }
+    if (params.get("honeymoon") === "1" && isHoneymoon) {
+      isHoneymoon.checked = true;
+      isHoneymoon.dispatchEvent(new Event("change", { bubbles: true }));
+      document.getElementById("bookingFormCard").scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
     /* --- Submit --- */
     var submitBtn = document.getElementById("submitBtn");
     var submitLabel = document.getElementById("submitLabel");
