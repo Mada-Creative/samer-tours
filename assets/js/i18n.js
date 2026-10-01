@@ -28,23 +28,23 @@ window.SITE_I18N = {
     hero_photo_role: "مؤسس ومنظّم رحلات",
     hero_photo_placeholder_text: "أضف صورة سامر هنا: assets/img/samer-hero.jpg",
     stat_destinations_number: "25+",
-    stat_destinations_label: "وجهة زرناها بأنفسنا",
+    stat_destinations_label: "وجهة زرتها بنفسي",
     stat_years_number: "1",
     stat_years_label: "سنة خبرة في تنظيم الرحلات",
     stat_travelers_number: "30+",
-    stat_travelers_label: "مسافر وثقوا برحلتهم معنا",
+    stat_travelers_label: "مسافر سافروا معي",
 
     /* About */
-    about_eyebrow: "قصتنا",
-    about_title: "لماذا سامر ابو مخ؟",
-    about_text: "قبل أن نرشّح لك أي وجهة، نكون قد زرناها بأنفسنا: مشينا في شوارعها، جرّبنا مطاعمها، واكتشفنا أماكنها السياحية عن قرب. هذا يعني أن كل نصيحة نقدّمها لك مبنية على تجربة حقيقية، لا على صور من الإنترنت.",
-    about_point_1_title: "نزورها بأنفسنا أولًا",
-    about_point_1_desc: "كل وجهة نعرضها لك، مررنا بها شخصيًا قبل أن نضعها في برامجنا.",
+    about_eyebrow: "من أنا؟",
+    about_title: "أنا سامر ابو مخ",
+    about_text: "قبل أن أرشّح لك أي وجهة، أكون قد زرتها بنفسي: مشيت في شوارعها، تذوّقت مأكولاتها، واكتشفت أماكنها السياحية عن قرب. لا أكتب لك عن أماكن رأيتها في الصور فقط، ولا أحب أن أرسلك في رحلة لا أعرف تفاصيلها. من ألمانيا، أخطط لك رحلتك خطوة بخطوة، وأبقى على تواصل مباشر معك من أول يوم حتى عودتك.",
+    about_point_1_title: "أزورها بنفسي أولًا",
+    about_point_1_desc: "كل وجهة أعرضها لك، أكون قد مررت بها شخصيًا قبل أن أضعها في برامجي.",
     about_point_2_title: "خطة مصمّمة خصيصًا لك",
-    about_point_2_desc: "تواريخ سفرك وعدد أيامك ورغباتك، نبني حولها البرنامج بالكامل.",
-    about_point_3_title: "دعم طوال الرحلة",
-    about_point_3_desc: "نبقى على تواصل معك عبر الهاتف والواتساب من الحجز حتى العودة.",
-    about_quote: "«السفر تجربة، ونحن نحرص أن نعيشها أولًا قبل أن نشاركها معك.»",
+    about_point_2_desc: "تواريخ سفرك وعدد أيامك ورغباتك، أبني حولها البرنامج بالكامل.",
+    about_point_3_title: "أبقى معك طوال الرحلة",
+    about_point_3_desc: "أبقى على تواصل معك عبر الهاتف والواتساب من لحظة الحجز حتى العودة.",
+    about_quote: "«السفر تجربة، وأنا أحرص أن أعيشها أولًا قبل أن أشاركها معك.»",
     about_quote_name: "سامر ابو مخ",
     about_quote_role: "منظّم رحلات",
 
@@ -72,12 +72,9 @@ window.SITE_I18N = {
     cta_banner_sub: "أخبرنا بالوجهة والتواريخ التي تناسبك، وسنتولى الباقي.",
     cta_banner_button: "ابدأ الحجز الآن",
 
-    /* Quick-action strip (homepage, under hero) */
-    qa_destinations: "استكشف وجهاتنا",
-    qa_booking: "احجز رحلتك",
-    qa_honeymoon: "رحلة شهر العسل",
-    qa_multi: "رحلة لأكثر من وجهة",
-    qa_whatsapp: "تواصل واتساب فوري",
+    /* Horizontal scroll strip (homepage, under hero) */
+    scroll_strip_eyebrow: "أبرز الوجهات",
+    scroll_strip_title: "تصفّح وجهاتنا",
 
     /* FAQ */
     faq_eyebrow: "أسئلة شائعة",
@@ -514,23 +511,23 @@ window.SITE_I18N = {
     hero_photo_role: "Founder & Trip Organizer",
     hero_photo_placeholder_text: "Add Samer's photo here: assets/img/samer-hero.jpg",
     stat_destinations_number: "25+",
-    stat_destinations_label: "Destinations visited ourselves",
+    stat_destinations_label: "Destinations I've visited myself",
     stat_years_number: "1",
     stat_years_label: "Year organizing trips",
     stat_travelers_number: "30+",
-    stat_travelers_label: "Travelers who trusted us",
+    stat_travelers_label: "Travelers who've traveled with me",
 
     /* About */
-    about_eyebrow: "Our story",
-    about_title: "Why Samer Abu Mock?",
-    about_text: "Before we recommend any destination, we've already been there ourselves: walked its streets, tried its food, and explored its landmarks up close. That means every piece of advice we give you is based on real experience, not photos from the internet.",
-    about_point_1_title: "We visit it ourselves first",
-    about_point_1_desc: "Every destination we offer, we've personally been to before adding it to our programs.",
+    about_eyebrow: "Who Am I?",
+    about_title: "I'm Samer Abu Mock",
+    about_text: "Before I recommend any destination to you, I've already been there myself: walked its streets, tasted its food, and explored its landmarks up close. I don't write to you about places I've only seen in photos, and I'd never send you on a trip I don't know inside and out. From Germany, I plan your trip step by step, and stay directly reachable from day one until you're back home.",
+    about_point_1_title: "I visit it myself first",
+    about_point_1_desc: "Every destination I offer, I've personally been to before adding it to my programs.",
     about_point_2_title: "A plan built just for you",
     about_point_2_desc: "Your travel dates, trip length and preferences shape the entire itinerary.",
-    about_point_3_title: "Support throughout your trip",
-    about_point_3_desc: "We stay reachable by phone and WhatsApp from booking until you're back home.",
-    about_quote: "\"Travel is an experience, and we make sure to live it first before we share it with you.\"",
+    about_point_3_title: "I stay with you throughout",
+    about_point_3_desc: "I stay reachable by phone and WhatsApp from the moment you book until you're back home.",
+    about_quote: "\"Travel is an experience, and I make sure to live it first before I share it with you.\"",
     about_quote_name: "Samer Abu Mock",
     about_quote_role: "Trip Organizer",
 
@@ -558,12 +555,9 @@ window.SITE_I18N = {
     cta_banner_sub: "Tell us the destination and dates that suit you, and we'll handle the rest.",
     cta_banner_button: "Start Booking Now",
 
-    /* Quick-action strip (homepage, under hero) */
-    qa_destinations: "Explore Our Destinations",
-    qa_booking: "Book Your Trip",
-    qa_honeymoon: "Honeymoon Trip",
-    qa_multi: "Multi-Destination Trip",
-    qa_whatsapp: "Instant WhatsApp Chat",
+    /* Horizontal scroll strip (homepage, under hero) */
+    scroll_strip_eyebrow: "Top Destinations",
+    scroll_strip_title: "Browse Our Destinations",
 
     /* FAQ */
     faq_eyebrow: "FAQ",

@@ -100,6 +100,25 @@
     container.appendChild(exploreCard);
   }
 
+  /* ---------- Horizontal scroll strip (homepage, under hero) ---------- */
+  function renderScrollStrip() {
+    var container = document.getElementById("scrollStrip");
+    if (!container || !window.DESTINATIONS) return;
+
+    var ids = ["madeira", "hallstatt", "longyearbyen", "zakopane", "tallinn", "madrid", "dubai", "oslo", "amsterdam", "budapest"];
+    ids.forEach(function (id) {
+      var dest = byId(id);
+      if (!dest) return;
+      var a = document.createElement("a");
+      a.href = "destination.html?id=" + id;
+      a.className = "scroll-strip-card";
+      a.innerHTML =
+        '<img src="' + dest.heroImage + '" alt="" loading="lazy">' +
+        '<span class="scroll-strip-card-label" data-i18n="dest_' + id + '_name">Name</span>';
+      container.appendChild(a);
+    });
+  }
+
   /* ---------- Booking form destination select ---------- */
   function renderBookingSelect(select) {
     if (!select || !window.DESTINATIONS) return;
@@ -299,6 +318,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     renderDestinationsPage();
     renderFeaturedGrid();
+    renderScrollStrip();
     renderAllBookingSelects();
     renderDestinationDetail();
 
