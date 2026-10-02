@@ -54,16 +54,52 @@
     var toggle = document.getElementById("navToggle");
     var nav = document.getElementById("mainNav");
     if (toggle && nav) {
+      var closeNav = function () {
+        nav.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+        document.body.classList.remove("nav-open");
+      };
       toggle.addEventListener("click", function () {
         var isOpen = nav.classList.toggle("open");
         toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        document.body.classList.toggle("nav-open", isOpen);
       });
       nav.querySelectorAll("a").forEach(function (link) {
-        link.addEventListener("click", function () {
-          nav.classList.remove("open");
-          toggle.setAttribute("aria-expanded", "false");
-        });
+        link.addEventListener("click", closeNav);
       });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") closeNav();
+      });
+    }
+
+    /* Dark / light mode toggle */
+    var themeToggle = document.getElementById("themeToggle");
+    if (themeToggle) {
+      themeToggle.addEventListener("click", function () {
+        var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", next);
+        try { localStorage.setItem("samerToursTheme", next); } catch (e) {}
+      });
+    }
+
+    /* Page loader: hide once everything has loaded (with a small minimum
+       display time so it doesn't just flash on fast connections) */
+    var loader = document.getElementById("pageLoader");
+    if (loader) {
+      var hideLoader = function () {
+        loader.classList.add("loaded");
+        document.body.classList.remove("loading");
+      };
+      if (document.readyState === "complete") {
+        setTimeout(hideLoader, 350);
+      } else {
+        window.addEventListener("load", function () { setTimeout(hideLoader, 350); });
+      }
+      // Safety net in case "load" is delayed or JS stalls elsewhere —
+      // the CSS loader-auto-hide animation is a further fallback on top of this.
+      setTimeout(hideLoader, 2500);
+    } else {
+      document.body.classList.remove("loading");
     }
 
     /* Sticky header shadow */

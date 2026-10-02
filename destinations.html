@@ -2,13 +2,19 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem('samerToursTheme');if(!t){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title data-i18n-title="page_destinations_title">الوجهات التي زرناها | سامر ابو مخ</title>
 <meta name="description" content="تعرّف على 25 وجهة زارها سامر ابو مخ بنفسه وأبرز الأماكن السياحية في كل منها.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%23151515'/%3E%3Cpath d='M12 5l2.5 5L20 12l-5.5 2L12 19l-2.5-5L4 12l5.5-2z' fill='%23C9A961'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css?v=4">
 </head>
-<body>
+<body class="loading">
+<div class="page-loader" id="pageLoader" aria-hidden="true">
+  <div class="page-loader-brand" data-i18n="brand_name">سامر ابو مخ</div>
+  <span class="page-loader-ring"></span>
+</div>
+<noscript><style>.page-loader{display:none!important;}body.loading{overflow:visible!important;}</style></noscript>
 <a class="skip-link" href="#main" data-i18n="skip_to_content">تخطي إلى المحتوى</a>
 
 <!-- ============ HEADER ============ -->
@@ -22,14 +28,23 @@
       <a href="destinations.html" data-i18n="nav_destinations">الوجهات</a>
       <a href="booking.html" data-i18n="nav_booking">احجز رحلتك</a>
       <a href="index.html#contact" data-i18n="nav_contact">تواصل معنا</a>
+      <a href="booking.html" class="btn btn-primary nav-cta" data-i18n="nav_cta">احجز الآن</a>
     </nav>
     <div class="header-actions">
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Dark mode / الوضع الداكن">
+        <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>
+        <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+      </button>
       <div class="lang-switch" role="group" aria-label="Language / اللغة">
         <button type="button" class="lang-btn" data-lang="ar">AR</button>
         <button type="button" class="lang-btn" data-lang="en">EN</button>
       </div>
       <a href="booking.html" class="btn btn-primary btn-sm" data-i18n="nav_cta">احجز الآن</a>
-      <button class="nav-toggle" id="navToggle" aria-label="menu" aria-expanded="false">☰</button>
+      <button class="nav-toggle" id="navToggle" aria-label="menu" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
     </div>
   </div>
 </header>
@@ -134,9 +149,9 @@
   <svg viewBox="0 0 32 32" fill="#fff"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-2.1c1.9 1.1 4 1.6 6 1.6 7 0 12.7-5.6 12.7-12.5C28.7 8.6 23 3 16 3zm0 22.7c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.2 1.2 1.2-4-.3-.4a10.1 10.1 0 0 1-1.6-5.4c0-5.6 4.6-10.1 10.6-10.1s10.6 4.5 10.6 10.1S22 25.7 16 25.7zm5.8-7.6c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.1.2 2.1 3.2 5.1 4.4.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.2-.6-.4z"/></svg>
 </a>
 
-<script src="assets/js/i18n.js"></script>
-<script src="assets/js/destinations-data.js"></script>
-<script src="assets/js/render-destinations.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="assets/js/i18n.js?v=4"></script>
+<script src="assets/js/destinations-data.js?v=4"></script>
+<script src="assets/js/render-destinations.js?v=4"></script>
+<script src="assets/js/main.js?v=4"></script>
 </body>
 </html>
